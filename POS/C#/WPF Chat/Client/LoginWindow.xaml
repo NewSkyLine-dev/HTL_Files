@@ -1,0 +1,137 @@
+<Window x:Class="Client.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Connect to Chat Server"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <StackPanel Grid.Row="0"
+                HorizontalAlignment="Center"
+                Margin="0,0,0,20">
+            <TextBlock Text="💬"
+                    FontSize="48"
+                    HorizontalAlignment="Center"/>
+            <TextBlock Text="WPF Chat Client"
+                    FontSize="18"
+                    FontWeight="Bold"
+                    HorizontalAlignment="Center"/>
+            <TextBlock Text="Connect to chat server"
+                    FontSize="12"
+                    Foreground="Gray"
+                    HorizontalAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Main Content -->
+        <TabControl Grid.Row="1"
+                x:Name="LoginTabControl">
+            <!-- Login Tab -->
+            <TabItem Header="🔑 Login">
+                <StackPanel Margin="20">
+                    <TextBlock Text="Server Address:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <TextBox x:Name="ServerAddressTextBox"
+                            Text="localhost:8888"
+                            Height="25"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Username:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <TextBox x:Name="LoginUsernameTextBox"
+                            Height="25"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Password:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="LoginPasswordBox"
+                            Height="25"
+                            Margin="0,0,0,20"/>
+
+                    <Button x:Name="LoginButton"
+                            Content="🔑 Login"
+                            Height="35"
+                            FontWeight="Bold"
+                            Click="LoginButton_Click"
+                            Margin="0,0,0,10"/>
+
+                    <CheckBox x:Name="RememberServerCheckBox"
+                            Content="Remember server address"
+                              IsChecked="True"
+                            Margin="0,10,0,0"/>
+                </StackPanel>
+            </TabItem>
+
+            <!-- Register Tab -->
+            <TabItem Header="📝 Register">
+                <StackPanel Margin="20">
+                    <TextBlock Text="Username:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <TextBox x:Name="RegisterUsernameTextBox"
+                            Height="25"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Password:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="RegisterPasswordBox"
+                            Height="25"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Confirm Password:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <PasswordBox x:Name="ConfirmPasswordBox"
+                            Height="25"
+                            Margin="0,0,0,15"/>
+
+                    <TextBlock Text="Choose Color:"
+                            FontWeight="Bold"
+                            Margin="0,0,0,5"/>
+                    <StackPanel Orientation="Horizontal"
+                            Margin="0,0,0,20">
+                        <Rectangle x:Name="ColorPreview"
+                                Width="25"
+                                Height="25"
+                                Fill="Blue"
+                                   Stroke="Black"
+                                Margin="0,0,10,0"/>
+                        <Button x:Name="ChooseColorButton"
+                                Content="Choose..."
+                                Width="80"
+                                Height="25"
+                                Click="ChooseColorButton_Click"/>
+                    </StackPanel>
+
+                    <Button x:Name="RegisterButton"
+                            Content="📝 Register"
+                            Height="35"
+                            FontWeight="Bold"
+                            Click="RegisterButton_Click"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <!-- Footer -->
+        <StackPanel Grid.Row="2"
+                Orientation="Horizontal"
+                HorizontalAlignment="Right"
+                Margin="0,20,0,0">
+            <Button x:Name="CancelButton"
+                    Content="Cancel"
+                    Width="80"
+                    Height="30"
+                    Click="CancelButton_Click"
+                    Margin="0,0,10,0"/>
+        </StackPanel>
+    </Grid>
+</Window>

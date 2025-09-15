@@ -1,0 +1,32 @@
+[{
+  "_id": "Riding",
+  "count": 11
+},
+{
+  "_id": "Fishing",
+  "count": 10
+},
+{
+  "_id": "Golf",
+  "count": 8
+},
+{
+  "_id": "Walking",
+  "count": 5
+},
+{
+  "_id": "Swimming",
+  "count": 4
+},
+{
+  "_id": "Sailing",
+  "count": 3
+},
+{
+  "_id": "Hunting",
+  "count": 3
+},
+{
+  "_id": "Poker",
+  "count": 3
+}]

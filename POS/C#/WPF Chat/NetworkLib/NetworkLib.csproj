@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="linq2db.SQLite" Version="5.4.1" />
+  </ItemGroup>
+
 </Project>

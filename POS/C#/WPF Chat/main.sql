@@ -1,0 +1,36 @@
+CREATE TABLE Users (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Username TEXT NOT NULL,
+    PasswordHash TEXT NOT NULL,
+    Color TEXT NOT NULL DEFAULT '#FF000000',
+    ProfileImageBase64 TEXT,
+    LastSeen DATETIME NOT NULL
+);
+
+CREATE TABLE ChatRooms (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Name TEXT NOT NULL,
+    Description TEXT NOT NULL,
+    Created DATETIME NOT NULL
+);
+
+CREATE TABLE ChatMessages (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserId INTEGER NOT NULL,
+    ChatRoomId INTEGER,
+    PrivateToUserId INTEGER,
+    Content TEXT NOT NULL,
+    Timestamp DATETIME NOT NULL,
+    FOREIGN KEY(UserId) REFERENCES Users(Id),
+    FOREIGN KEY(ChatRoomId) REFERENCES ChatRooms(Id),
+    FOREIGN KEY(PrivateToUserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE RoomMembers (
+    UserId INTEGER NOT NULL,
+    RoomId INTEGER NOT NULL,
+    JoinedAt DATETIME NOT NULL,
+    PRIMARY KEY (UserId, RoomId),
+    FOREIGN KEY(UserId) REFERENCES Users(Id),
+    FOREIGN KEY(RoomId) REFERENCES ChatRooms(Id)
+);
