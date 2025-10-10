@@ -1,0 +1,5 @@
+set(__QT_DEPLOY_TARGET_Calculator_FILE D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/Debug/Calculator.lib)
+set(__QT_DEPLOY_TARGET_Calculator_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_Taschenrechner_FILE D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/Debug/Taschenrechner.exe)
+set(__QT_DEPLOY_TARGET_Taschenrechner_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_Taschenrechner_RUNTIME_DLLS C:/Qt/6.9.2/msvc2022_64/bin/Qt6Widgetsd.dll;C:/Qt/6.9.2/msvc2022_64/bin/Qt6Guid.dll;C:/Qt/6.9.2/msvc2022_64/bin/Qt6Cored.dll)

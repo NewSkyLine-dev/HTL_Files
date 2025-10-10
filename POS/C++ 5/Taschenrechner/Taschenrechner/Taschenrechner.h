@@ -14,8 +14,8 @@ public:
 
 private:
     Ui::TaschenrechnerClass ui;
-    QLineEdit* display{ nullptr };
-    bool justEvaluated{ false };
+    QLineEdit *display{nullptr};
+    bool justEvaluated{false};
 
 private slots:
     void digitClicked();
@@ -23,8 +23,7 @@ private slots:
     void clearEntry();
     void clearAll();
     void backspace();
-	void evaluate();
-	void parensClicked();
+    void evaluate();
+    void parensClicked();
     void equalClicked();
 };
-
