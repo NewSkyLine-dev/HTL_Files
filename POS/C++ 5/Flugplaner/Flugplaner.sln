@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36414.22 d17.14
+VisualStudioVersion = 17.14.36414.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Flugplaner", "Flugplaner\Flugplaner.vcxproj", "{9E640801-6B3D-455F-8A2A-47A932163D1E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QxOrm", "Libraries\QxOrm\QxOrm.vcxproj", "{49FC4CBF-3BE2-413B-A424-4E34870EC14A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9E640801-6B3D-455F-8A2A-47A932163D1E}.Debug|x64.Build.0 = Debug|x64
 		{9E640801-6B3D-455F-8A2A-47A932163D1E}.Release|x64.ActiveCfg = Release|x64
 		{9E640801-6B3D-455F-8A2A-47A932163D1E}.Release|x64.Build.0 = Release|x64
+		{49FC4CBF-3BE2-413B-A424-4E34870EC14A}.Debug|x64.ActiveCfg = Debug|x64
+		{49FC4CBF-3BE2-413B-A424-4E34870EC14A}.Debug|x64.Build.0 = Debug|x64
+		{49FC4CBF-3BE2-413B-A424-4E34870EC14A}.Release|x64.ActiveCfg = Release|x64
+		{49FC4CBF-3BE2-413B-A424-4E34870EC14A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

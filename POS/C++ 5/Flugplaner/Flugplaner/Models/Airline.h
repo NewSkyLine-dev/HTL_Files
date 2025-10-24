@@ -1,26 +1,34 @@
 #pragma once
+
 #include <QString>
-#include <QSqlQuery>
+#include <QxOrm.h>
 
 class Airline
 {
 public:
-	Airline(int id, QString name, int alliance)
-		: id(id), name(name), alliance(alliance) {
-	}
+	Airline() : m_id(0), m_alliance(0) {}
+	Airline(int id, const QString &name, int alliance)
+		: m_id(id), m_name(name), m_alliance(alliance) {}
 
-	Airline() : id(0), name(""), alliance(0) {}
+	virtual ~Airline() {}
 
-	// Constructor to create Airline from QSqlQuery result
-	Airline(QSqlQuery& query)
-		: id(query.value("id").toInt()),
-		name(query.value("name").toString()),
-		alliance(query.value("alliance").toInt()) {
-	}
+	// Getters
+	int getId() const { return m_id; }
+	QString getName() const { return m_name; }
+	int getAlliance() const { return m_alliance; }
 
-	~Airline() {}
+	// Setters
+	void setId(int id) { m_id = id; }
+	void setName(const QString &name) { m_name = name; }
+	void setAlliance(int alliance) { m_alliance = alliance; }
 
-	int id;
-	QString name;
-	int alliance;
+protected:
+	long m_id;
+	QString m_name;
+	long m_alliance;
+
+private:
+	QX_REGISTER_FRIEND_CLASS(Airline)
 };
+
+QX_REGISTER_HPP_EXPORT_DLL_WATCOM_BORLAND(Airline, 0);

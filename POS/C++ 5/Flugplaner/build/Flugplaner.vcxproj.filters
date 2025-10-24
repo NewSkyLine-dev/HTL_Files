@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\mocs_compilation_Debug.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Flugplaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\MapWidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Databaser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\QxOrmRegistration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Airport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Airline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Route.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Alliance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Utilities\FlyGraph.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\5TRMKD6I4L_Debug\qrc_Flugplaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\mocs_compilation_Release.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\5TRMKD6I4L_Release\qrc_Flugplaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\mocs_compilation_MinSizeRel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\5TRMKD6I4L_MinSizeRel\qrc_Flugplaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\mocs_compilation_RelWithDebInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\5TRMKD6I4L_RelWithDebInfo\qrc_Flugplaner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Flugplaner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\MapWidget.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Databaser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Airport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Airline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Route.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Models\Alliance.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Utilities\FlyGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\include_Debug\Flugplaner\ui_Flugplaner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\include_Release\Flugplaner\ui_Flugplaner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\include_MinSizeRel\Flugplaner\ui_Flugplaner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\include_RelWithDebInfo\Flugplaner\ui_Flugplaner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\CMakeFiles\63d36c7327d15ef193a9246850078628\autouic_(CONFIG).stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\CMakeFiles\4e9e99c7809a3eda58a6d8c80fa2e712\qrc_Flugplaner.cpp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Flugplaner.qrc" />
+    <None Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\Flugplaner\Flugplaner.ui" />
+    <None Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\autouic_Debug.stamp" />
+    <None Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\autouic_Release.stamp" />
+    <None Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\autouic_MinSizeRel.stamp" />
+    <None Include="D:\Schule\HTL_Files\POS\C++ 5\Flugplaner\build\Flugplaner_autogen\autouic_RelWithDebInfo.stamp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{B5EEF327-1A5B-3C31-AD90-4F27095BE188}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5C58376F-6695-3B3E-9B17-2B9D292A323D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A7A2BECB-FEAE-3665-912A-D78787D55F45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+D:/Schule/HTL_Files/POS/C++ 5/Flugplaner/build/CMakeFiles/Flugplaner.dir
+D:/Schule/HTL_Files/POS/C++ 5/Flugplaner/build/CMakeFiles/ALL_BUILD.dir
+D:/Schule/HTL_Files/POS/C++ 5/Flugplaner/build/CMakeFiles/ZERO_CHECK.dir

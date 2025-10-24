@@ -15,7 +15,8 @@
     <Keyword>QtVS_v304</Keyword>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">10.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformVersion Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">10.0</WindowsTargetPlatformVersion>
-    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">
+      $(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -67,6 +68,9 @@
     <PostBuildEvent>
       <Command>xcopy /c /i /e /h /y "$(ProjectDir)resources\" "$(OutDir)resources\"</Command>
     </PostBuildEvent>
+    <ClCompile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
     <ClCompile>
@@ -74,10 +78,14 @@
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Libraries\QxOrm\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_QX_SHARED_LIB;_QX_NO_JSON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries\QxOrm\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>QxOrmd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
@@ -88,12 +96,18 @@
       <ConformanceMode>true</ConformanceMode>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>
+        $(SolutionDir)Libraries\QxOrm\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_QX_SHARED_LIB;_QX_NO_JSON;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>
+        $(SolutionDir)Libraries\QxOrm\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>QxOrm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -106,13 +120,17 @@
     <ClCompile Include="Databaser.cpp" />
     <ClCompile Include="Flugplaner.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Models\Airport.cpp" />
+    <ClCompile Include="Models\Airline.cpp" />
+    <ClCompile Include="Models\Alliance.cpp" />
+    <ClCompile Include="Models\Route.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Models\Airline.h" />
-    <ClInclude Include="Models\Airport.h" />
+    <QtMoc Include="Models\Airline.h" />
+    <QtMoc Include="Models\Airport.h" />
+    <QtMoc Include="Models\Alliance.h" />
+    <QtMoc Include="Models\Route.h" />
     <ClInclude Include="Databaser.h" />
-    <ClInclude Include="Models\Alliance.h" />
-    <ClInclude Include="Models\Route.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Utilities\FlyGraph.h" />
   </ItemGroup>

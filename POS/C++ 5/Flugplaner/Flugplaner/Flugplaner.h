@@ -3,7 +3,6 @@
 #include <QtWidgets/QMainWindow>
 #include <QComboBox>
 #include <QTableWidget>
-#include "ui_Flugplaner.h"
 #include "MapWidget.h"
 
 class Flugplaner : public QMainWindow
@@ -21,8 +20,6 @@ private slots:
     void onAirlineChanged(int index);
 
 private:
-    Ui::FlugplanerClass ui;
-    
     QComboBox* fromCombo;
     QComboBox* toCombo;
     QComboBox* airlineCombo;

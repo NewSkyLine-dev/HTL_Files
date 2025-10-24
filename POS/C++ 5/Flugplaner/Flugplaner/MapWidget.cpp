@@ -6,7 +6,7 @@
 #include <QFont>
 #include <QDebug>
 
-MapWidget::MapWidget(QWidget* parent)
+MapWidget::MapWidget(QWidget *parent)
 	: QWidget(parent), preferredAirlineId(-1)
 {
 	loadAirlineAlliances();
@@ -16,16 +16,17 @@ MapWidget::~MapWidget()
 {
 }
 
-void MapWidget::setMapImage(const QString& imagePath)
+void MapWidget::setMapImage(const QString &imagePath)
 {
 	mapImage = QPixmap(imagePath);
-	if (mapImage.isNull()) {
+	if (mapImage.isNull())
+	{
 		qWarning() << "Failed to load map image:" << imagePath;
 	}
 	update();
 }
 
-void MapWidget::setFlightPath(const FlightPath& path, int preferredAirline)
+void MapWidget::setFlightPath(const FlightPath &path, int preferredAirline)
 {
 	currentPath = path;
 	preferredAirlineId = preferredAirline;
@@ -35,16 +36,26 @@ void MapWidget::setFlightPath(const FlightPath& path, int preferredAirline)
 void MapWidget::loadAirlineAlliances()
 {
 	airlineAlliances.clear();
-	Databaser& db = Databaser::getInstance();
-	QList<Airline> airlines = db.runQueryList<Airline>("SELECT * FROM Airline;");
-	for (const Airline& airline : airlines) {
-		airlineAlliances[airline.id] = airline.alliance;
+	// QxOrm DAO queries require proper template registration
+	/*
+	try {
+		QList<Airline> airlines;
+		qx::dao::fetch_all(airlines, nullptr);
+		for (const Airline& airline : airlines) {
+			airlineAlliances[airline.getId()] = airline.getAlliance();
+		}
+		qInfo() << "Loaded" << airlines.size() << "airline alliances";
 	}
+	catch (const std::exception &e) {
+		qWarning() << "Error loading airline alliances:" << e.what();
+	}
+	*/
 }
 
 QPoint MapWidget::latLongToPixel(float latitude, float longitude) const
 {
-	if (mapImage.isNull()) {
+	if (mapImage.isNull())
+	{
 		return QPoint(0, 0);
 	}
 
@@ -53,52 +64,58 @@ QPoint MapWidget::latLongToPixel(float latitude, float longitude) const
 
 	// Latitude: +90 (top) to -90 (bottom)
 	// Longitude: -180 (left) to +180 (right)
-	
+
 	// Convert latitude: +90 -> y=0, -90 -> y=height
 	int y = static_cast<int>((90.0f - latitude) / 180.0f * height);
-	
+
 	// Convert longitude: -180 -> x=0, +180 -> x=width
 	int x = static_cast<int>((longitude + 180.0f) / 360.0f * width);
 
 	return QPoint(x, y);
 }
 
-void MapWidget::paintEvent(QPaintEvent* event)
+void MapWidget::paintEvent(QPaintEvent *event)
 {
 	QPainter painter(this);
-	
-	if (!mapImage.isNull()) {
+
+	if (!mapImage.isNull())
+	{
 		painter.drawPixmap(rect(), mapImage);
 	}
 
-	if (currentPath.segments.isEmpty()) {
+	if (currentPath.segments.isEmpty())
+	{
 		return;
 	}
 
 	// Get the preferred airline's alliance if applicable
-	int preferredAlliance = (preferredAirlineId >= 0) 
-		? airlineAlliances.value(preferredAirlineId, -1) 
-		: -1;
+	int preferredAlliance = (preferredAirlineId >= 0)
+								? airlineAlliances.value(preferredAirlineId, -1)
+								: -1;
 
 	// Draw flight routes
 	painter.setRenderHint(QPainter::Antialiasing);
-	
-	for (const FlightSegment& segment : currentPath.segments) {
+
+	for (const FlightSegment &segment : currentPath.segments)
+	{
 		Airport from = FlyGraph::GetAirport(segment.fromAirportId);
 		Airport to = FlyGraph::GetAirport(segment.toAirportId);
 
-		QPoint fromPoint = latLongToPixel(from.latitude, from.longitude);
-		QPoint toPoint = latLongToPixel(to.latitude, to.longitude);
+		QPoint fromPoint = latLongToPixel(from.getLatitude(), from.getLongitude());
+		QPoint toPoint = latLongToPixel(to.getLatitude(), to.getLongitude());
 
 		QColor lineColor;
-		if (segment.airlineId == preferredAirlineId) {
+		if (segment.airlineId == preferredAirlineId)
+		{
 			lineColor = Qt::red; // Preferred airline
 		}
-		else if (preferredAlliance >= 0 && 
-			airlineAlliances.value(segment.airlineId, -1) == preferredAlliance) {
+		else if (preferredAlliance >= 0 &&
+				 airlineAlliances.value(segment.airlineId, -1) == preferredAlliance)
+		{
 			lineColor = Qt::blue; // Same alliance
 		}
-		else {
+		else
+		{
 			lineColor = Qt::gray; // Other airlines
 		}
 
@@ -115,21 +132,24 @@ void MapWidget::paintEvent(QPaintEvent* event)
 	painter.setFont(font);
 
 	QSet<int> drawnAirports;
-	
-	for (const FlightSegment& segment : currentPath.segments) {
+
+	for (const FlightSegment &segment : currentPath.segments)
+	{
 		Airport from = FlyGraph::GetAirport(segment.fromAirportId);
 		Airport to = FlyGraph::GetAirport(segment.toAirportId);
 
-		if (from.id != 0 && !drawnAirports.contains(from.id)) {
-			QPoint point = latLongToPixel(from.latitude, from.longitude);
-			painter.drawText(point.x() - 15, point.y() - 5, from.iata);
-			drawnAirports.insert(from.id);
+		if (from.getId() != 0 && !drawnAirports.contains(from.getId()))
+		{
+			QPoint point = latLongToPixel(from.getLatitude(), from.getLongitude());
+			painter.drawText(point.x() - 15, point.y() - 5, from.getIata());
+			drawnAirports.insert(from.getId());
 		}
 
-		if (to.id != 0 && !drawnAirports.contains(to.id)) {
-			QPoint point = latLongToPixel(to.latitude, to.longitude);
-			painter.drawText(point.x() - 15, point.y() - 5, to.iata);
-			drawnAirports.insert(to.id);
+		if (to.getId() != 0 && !drawnAirports.contains(to.getId()))
+		{
+			QPoint point = latLongToPixel(to.getLatitude(), to.getLongitude());
+			painter.drawText(point.x() - 15, point.y() - 5, to.getIata());
+			drawnAirports.insert(to.getId());
 		}
 	}
 }

@@ -5,6 +5,8 @@
 #include <QSet>
 #include <QDebug>
 
+#include <QxOrm_Impl.h>
+
 // Initialize static members
 QMap<int, Airport> FlyGraph::airports;
 QMap<int, QList<Route>> FlyGraph::routes;
@@ -16,29 +18,41 @@ void FlyGraph::BuildGraph()
 	routes.clear();
 	airlineAlliances.clear();
 
-	// Get Databaser singleton instance
-	Databaser& db = Databaser::getInstance();
+	// QxOrm DAO queries require proper template registration
+	// This will work after QxOrm configuration is fully completed
+	/*
+	try {
+		// Load all airports using QxORM
+		QList<Airport> airportList;
+		qx::dao::fetch_all(airportList);
+		for (const Airport &airport : airportList)
+		{
+			airports[airport.getId()] = airport;
+		}
 
-	// Load all airports
-	QList<Airport> airportList = db.runQueryList<Airport>("SELECT * FROM Airport;");
-	for (const Airport& airport : airportList) {
-		airports[airport.id] = airport;
-	}
-	qInfo() << "Loaded" << airports.size() << "airports";
+		// Load all routes using QxORM
+		QList<Route> routeList;
+		qx::dao::fetch_all(routeList);
+		for (const Route &route : routeList)
+		{
+			routes[route.getAirport1()].append(route);
+		}
 
-	// Load all routes
-	QList<Route> routeList = db.runQueryList<Route>("SELECT * FROM Route;");
-	for (const Route& route : routeList) {
-		routes[route.airport1].append(route);
+		// Load airline alliances using QxORM
+		QList<Airline> airlines;
+		qx::dao::fetch_all(airlines);
+		for (const Airline &airline : airlines)
+		{
+			airlineAlliances[airline.getId()] = airline.getAlliance();
+		}
+		qInfo() << "FlyGraph initialized with" << airports.size() << "airports," << routeList.size() << "routes";
 	}
-	qInfo() << "Loaded" << routeList.size() << "routes";
-
-	// Load airline alliances
-	QList<Airline> airlines = db.runQueryList<Airline>("SELECT * FROM Airline;");
-	for (const Airline& airline : airlines) {
-		airlineAlliances[airline.id] = airline.alliance;
+	catch (const std::exception &e) {
+		qWarning() << "Error loading graph data:" << e.what();
+		qInfo() << "FlyGraph initialized with empty data (database error)";
 	}
-	qInfo() << "Loaded" << airlines.size() << "airlines";
+	*/
+	qInfo() << "FlyGraph initialized with empty data (QxOrm DAO pending)";
 }
 
 Airport FlyGraph::GetAirport(int airportId)
@@ -54,10 +68,13 @@ QList<Airport> FlyGraph::GetAllAirports()
 QList<int> FlyGraph::GetAirlinesByAirportId(int airportId)
 {
 	QList<int> airlines;
-	if (routes.contains(airportId)) {
-		for (const Route& route : routes[airportId]) {
-			if (!airlines.contains(route.airline)) {
-				airlines.append(route.airline);
+	if (routes.contains(airportId))
+	{
+		for (const Route &route : routes[airportId])
+		{
+			if (!airlines.contains(route.getAirline()))
+			{
+				airlines.append(route.getAirline());
 			}
 		}
 	}
@@ -68,7 +85,8 @@ FlightPath FlyGraph::FindShortestPath(int fromAirportId, int toAirportId, int pr
 {
 	FlightPath result;
 
-	if (!airports.contains(fromAirportId) || !airports.contains(toAirportId)) {
+	if (!airports.contains(fromAirportId) || !airports.contains(toAirportId))
+	{
 		qWarning() << "Invalid airport IDs:" << fromAirportId << toAirportId;
 		return result;
 	}
@@ -83,25 +101,31 @@ FlightPath FlyGraph::FindShortestPath(int fromAirportId, int toAirportId, int pr
 	queue.enqueue(fromAirportId);
 	visited.insert(fromAirportId);
 
-	while (!queue.isEmpty()) {
+	while (!queue.isEmpty())
+	{
 		int currentAirport = queue.dequeue();
 		int currentDistance = distances[currentAirport];
 
-		if (routes.contains(currentAirport)) {
-			for (const Route& route : routes[currentAirport]) {
-				int nextAirport = route.airport2;
+		if (routes.contains(currentAirport))
+		{
+			for (const Route &route : routes[currentAirport])
+			{
+				int nextAirport = route.getAirport2();
 
-				if (!distances.contains(nextAirport)) {
+				if (!distances.contains(nextAirport))
+				{
 					// First time reaching this airport
 					distances[nextAirport] = currentDistance + 1;
 					predecessors[nextAirport].append(qMakePair(currentAirport, route));
-					
-					if (!visited.contains(nextAirport)) {
+
+					if (!visited.contains(nextAirport))
+					{
 						queue.enqueue(nextAirport);
 						visited.insert(nextAirport);
 					}
 				}
-				else if (distances[nextAirport] == currentDistance + 1) {
+				else if (distances[nextAirport] == currentDistance + 1)
+				{
 					// Found another shortest path to this airport
 					predecessors[nextAirport].append(qMakePair(currentAirport, route));
 				}
@@ -109,22 +133,27 @@ FlightPath FlyGraph::FindShortestPath(int fromAirportId, int toAirportId, int pr
 		}
 	}
 
-	if (!distances.contains(toAirportId)) {
+	if (!distances.contains(toAirportId))
+	{
 		qWarning() << "No path found from" << fromAirportId << "to" << toAirportId;
 		return result;
 	}
 
 	// Reconstruct the best path
 	int preferredAlliance = (preferredAirlineId >= 0) ? airlineAlliances.value(preferredAirlineId, -1) : -1;
-	
+
 	// Helper function to score a path
-	auto scorePath = [preferredAirlineId, preferredAlliance](const QList<FlightSegment>& path) -> int {
+	auto scorePath = [preferredAirlineId, preferredAlliance](const QList<FlightSegment> &path) -> int
+	{
 		int score = 0;
-		for (const FlightSegment& segment : path) {
-			if (segment.airlineId == preferredAirlineId) {
+		for (const FlightSegment &segment : path)
+		{
+			if (segment.airlineId == preferredAirlineId)
+			{
 				score += 100; // Highest priority
 			}
-			else if (preferredAlliance >= 0 && airlineAlliances.value(segment.airlineId, -1) == preferredAlliance) {
+			else if (preferredAlliance >= 0 && airlineAlliances.value(segment.airlineId, -1) == preferredAlliance)
+			{
 				score += 50; // Medium priority
 			}
 		}
@@ -133,25 +162,30 @@ FlightPath FlyGraph::FindShortestPath(int fromAirportId, int toAirportId, int pr
 
 	// Recursive function to build all possible paths
 	QList<QList<FlightSegment>> allPaths;
-	
-	std::function<void(int, QList<FlightSegment>)> buildPaths = [&](int currentAirport, QList<FlightSegment> currentPath) {
-		if (currentAirport == fromAirportId) {
+
+	std::function<void(int, QList<FlightSegment>)> buildPaths = [&](int currentAirport, QList<FlightSegment> currentPath)
+	{
+		if (currentAirport == fromAirportId)
+		{
 			// Reverse the path since we built it backwards
 			QList<FlightSegment> reversedPath;
-			for (int i = currentPath.size() - 1; i >= 0; --i) {
+			for (int i = currentPath.size() - 1; i >= 0; --i)
+			{
 				reversedPath.append(currentPath[i]);
 			}
 			allPaths.append(reversedPath);
 			return;
 		}
 
-		if (predecessors.contains(currentAirport)) {
-			for (const auto& pred : predecessors[currentAirport]) {
+		if (predecessors.contains(currentAirport))
+		{
+			for (const auto &pred : predecessors[currentAirport])
+			{
 				int prevAirport = pred.first;
-				const Route& route = pred.second;
-				
+				const Route &route = pred.second;
+
 				QList<FlightSegment> newPath = currentPath;
-				newPath.append(FlightSegment(prevAirport, currentAirport, route.airline));
+				newPath.append(FlightSegment(prevAirport, currentAirport, route.getAirline()));
 				buildPaths(prevAirport, newPath);
 			}
 		}
@@ -160,13 +194,16 @@ FlightPath FlyGraph::FindShortestPath(int fromAirportId, int toAirportId, int pr
 	buildPaths(toAirportId, QList<FlightSegment>());
 
 	// Find the best path based on scoring
-	if (!allPaths.isEmpty()) {
+	if (!allPaths.isEmpty())
+	{
 		QList<FlightSegment> bestPath = allPaths.first();
 		int bestScore = scorePath(bestPath);
 
-		for (const auto& path : allPaths) {
+		for (const auto &path : allPaths)
+		{
 			int pathScore = scorePath(path);
-			if (pathScore > bestScore) {
+			if (pathScore > bestScore)
+			{
 				bestPath = path;
 				bestScore = pathScore;
 			}
