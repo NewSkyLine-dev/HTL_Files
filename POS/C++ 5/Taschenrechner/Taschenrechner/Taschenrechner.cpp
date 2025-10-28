@@ -1,204 +1,80 @@
-﻿#include "Taschenrechner.h"
+#include "Taschenrechner.h"
 
-#include <QApplication>
-#include <QWidget>
+#define exprtk_disable_enhanced_features
+#include "exprtk.hpp"
+
 #include <QGridLayout>
 #include <QPushButton>
-#include <QLineEdit>
-#include <QFont>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QSizePolicy>
-#include <QComboBox>
-
-#include "Calculator.h"
 
 Taschenrechner::Taschenrechner(QWidget *parent)
-	: QMainWindow(parent)
+    : QMainWindow(parent)
 {
-	setWindowTitle("Taschenrechner");
-	auto *central = new QWidget;
-	auto *root = new QVBoxLayout(central);
-	root->setContentsMargins(12, 12, 12, 12);
-	root->setSpacing(10);
-	setCentralWidget(central);
+	auto centralWidget = new QWidget(this);
+	auto centralLayout = new QVBoxLayout(centralWidget);
+	centralLayout->setSpacing(2);
 
-	display = new QLineEdit(central);
-	display->setReadOnly(true);
-	display->setAlignment(Qt::AlignRight);
-	QFont f = display->font();
-	f.setPointSize(22);
-	display->setFont(f);
-	display->setMinimumHeight(50);
-	display->setText("0");
-	display->setStyleSheet("QLineEdit{ padding:10px; }");
-	root->addWidget(display);
+	m_resultLabel = new QLabel("0");
+	m_evalButton = new QPushButton("=");
+	connect(m_evalButton, &QPushButton::clicked, this, &Taschenrechner::onEvalButtonClicked);
 
-	auto *grid = new QGridLayout();
-	grid->setSpacing(8);
-	root->addLayout(grid);
+	centralLayout->addWidget(m_resultLabel);
 
-	auto makeBtn = [&](const QString &text,
-					   void (Taschenrechner::*member)())
-	{
-		auto *b = new QPushButton(text, central);
-		b->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-		QFont bf = b->font();
-		bf.setPointSize(16);
-		b->setFont(bf);
-		connect(b, &QPushButton::clicked, this, member);
-		return b;
-	};
+	auto buttonGridWidget = new QWidget(this);
+	auto buttonGridLayout = new QGridLayout(buttonGridWidget);
 
-	auto makeComboBox = [&](const QStringList &items, void (Taschenrechner::*member)())
-	{
-		auto *cb = new QComboBox(central);
-		cb->addItems(items);
-		cb->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-		cb->setStyleSheet("QComboBox{ border:none; }");
-		QFont bf = cb->font();
-		bf.setPointSize(16);
-		cb->setFont(bf);
-		connect(cb, &QComboBox::activated, this, member);
-		return cb;
-	};
+	std::array<char, 12> elements = {'7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '/' };
 
-	// Top row: CE, C, ⌫, *
-	grid->addWidget(makeBtn("CE", &Taschenrechner::clearEntry), 0, 0);
-	grid->addWidget(makeBtn("C", &Taschenrechner::clearAll), 0, 1);
-	grid->addWidget(makeBtn("⌫", &Taschenrechner::backspace), 0, 2);
-	grid->addWidget(makeBtn("/", &Taschenrechner::opClicked), 0, 3);
+	for (int i = 0; i < 12; ++i) {
+		auto button = new QPushButton(QString(elements[i]), this);
+		connect(button, &QPushButton::clicked, this, &Taschenrechner::onCalcButtonClicked);
+		button->setMinimumSize(40, 40);
+		int row = i / 4;
+		int col = i % 4;
+		buttonGridLayout->addWidget(button, row, col);
+	}
 
-	// Row 2: 7 8 9 *
-	grid->addWidget(makeBtn("7", &Taschenrechner::digitClicked), 1, 0);
-	grid->addWidget(makeBtn("8", &Taschenrechner::digitClicked), 1, 1);
-	grid->addWidget(makeBtn("9", &Taschenrechner::digitClicked), 1, 2);
-	grid->addWidget(makeBtn("*", &Taschenrechner::opClicked), 1, 3);
+	centralLayout->addWidget(buttonGridWidget);
+	
+	auto commaButton = new QPushButton(",", this);
+	connect(commaButton, &QPushButton::clicked, this, &Taschenrechner::onCalcButtonClicked);
 
-	// Row 3: 4 5 6 −
-	grid->addWidget(makeBtn("4", &Taschenrechner::digitClicked), 2, 0);
-	grid->addWidget(makeBtn("5", &Taschenrechner::digitClicked), 2, 1);
-	grid->addWidget(makeBtn("6", &Taschenrechner::digitClicked), 2, 2);
-	grid->addWidget(makeBtn("-", &Taschenrechner::opClicked), 2, 3);
+	centralLayout->addWidget(commaButton);
+	centralLayout->addWidget(m_evalButton);
+	
+	setCentralWidget(centralWidget);
+}
 
-	// Row 4: 1 2 3 +
-	grid->addWidget(makeBtn("1", &Taschenrechner::digitClicked), 3, 0);
-	grid->addWidget(makeBtn("2", &Taschenrechner::digitClicked), 3, 1);
-	grid->addWidget(makeBtn("3", &Taschenrechner::digitClicked), 3, 2);
-	grid->addWidget(makeBtn("+", &Taschenrechner::opClicked), 3, 3);
+void Taschenrechner::onEvalButtonClicked()
+{
+	QString expressionStr = m_resultLabel->text();
+	expressionStr.replace(",", ".");
+	typedef exprtk::symbol_table<double> symbol_table_t;
+	typedef exprtk::expression<double>     expression_t;
+	typedef exprtk::parser<double>             parser_t;
+	expression_t   expression;
+	parser_t parser;
+	if (parser.compile(expressionStr.toStdString(), expression)) {
+		double result = expression.value();
+		m_resultLabel->setText(QString::number(result, 'g', 15).replace(".", ","));
+	} else {
+		m_resultLabel->setText("Error");
+	}
+}
 
-	// Row 5: 0 . () =
-	grid->addWidget(makeBtn("0", &Taschenrechner::digitClicked), 4, 0);
-	grid->addWidget(makeBtn(".", &Taschenrechner::opClicked), 4, 1);
-	grid->addWidget(makeComboBox(QStringList{"(", ")"}, &Taschenrechner::parensClicked), 4, 2);
-	auto *eq = makeBtn("=", &Taschenrechner::equalClicked);
-	grid->addWidget(eq, 4, 3);
-
-	resize(320, 440);
-	setMinimumSize(280, 380);
-	setStyleSheet(R"(QPushButton{ padding:10px; border-radius:10px; }
-					QPushButton#equals{ font-weight:bold; }
-					QWidget{ background:#f5f6f7; } )");
+void Taschenrechner::onCalcButtonClicked()
+{
+	auto button = qobject_cast<QPushButton*>(sender());
+	if (button) {
+		QString buttonText = button->text();
+		QString currentText = m_resultLabel->text();
+		if (currentText == "0" || "Error") {
+			m_resultLabel->setText(buttonText);
+		} else {
+			m_resultLabel->setText(currentText + buttonText);
+		}
+	}
 }
 
 Taschenrechner::~Taschenrechner()
-{
-}
+{}
 
-void Taschenrechner::digitClicked()
-{
-	auto *btn = qobject_cast<QPushButton *>(sender());
-	if (!btn)
-		return;
-	if (display->text() == "0" || justEvaluated)
-	{
-		display->setText(btn->text());
-		justEvaluated = false;
-	}
-	else
-	{
-		display->setText(display->text() + btn->text());
-	}
-}
-
-void Taschenrechner::opClicked()
-{
-	auto *btn = qobject_cast<QPushButton *>(sender());
-	if (!btn)
-		return;
-
-	QString t = btn->text();
-	if (display->text().endsWith(" "))
-	{
-		QString s = display->text();
-		int i = s.lastIndexOf(' ');
-		if (i >= 0)
-			s = s.left(i) + t;
-		display->setText(s);
-	}
-	else
-	{
-		display->setText(display->text() + t);
-	}
-	justEvaluated = false;
-}
-
-void Taschenrechner::clearEntry()
-{
-	display->setText("0");
-	justEvaluated = false;
-}
-
-void Taschenrechner::clearAll()
-{
-	display->setText("0");
-	justEvaluated = false;
-}
-
-void Taschenrechner::backspace()
-{
-	auto *btn = qobject_cast<QPushButton *>(sender());
-	if (!btn)
-		return;
-	QString t = display->text();
-	if (t.length() <= 1)
-	{
-		display->setText("0");
-	}
-	else
-	{
-		t.chop(1);
-		display->setText(t);
-	}
-}
-
-void Taschenrechner::evaluate()
-{
-	Calculator calc;
-	QString expr = display->text();
-	QString result = calc.eval(expr);
-	display->setText(result);
-}
-
-void Taschenrechner::parensClicked()
-{
-	auto *cb = qobject_cast<QComboBox *>(sender());
-	if (!cb)
-		return;
-	QString t = cb->currentText();
-	if (display->text() == "0" || justEvaluated)
-	{
-		display->setText(t);
-		justEvaluated = false;
-	}
-	else
-	{
-		display->setText(display->text() + t);
-	}
-}
-
-void Taschenrechner::equalClicked()
-{
-	evaluate();
-	justEvaluated = true;
-}

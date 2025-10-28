@@ -1873,7 +1873,7 @@ namespace exprtk
                case 4 : exprtk_process_digit
                case 3 : exprtk_process_digit
                case 2 : exprtk_process_digit
-               case 1 : if ((digit = (*itr - zero))>= 10)
+               case 1 : if ((digit = (*itr - zero)) >= 10)
                         {
                            digit = 0;
                            return_result = false;
@@ -2081,7 +2081,8 @@ namespace exprtk
                   {
                      if (end == ++itr)
                         return false;
-                     else if (('I' <= (*itr)) && ((*itr) <= 'n'))
+
+                     if (('I' <= (*itr)) && ((*itr) <= 'n'))
                      {
                         if (('i' == (*itr)) || ('I' == (*itr)))
                         {
@@ -3237,6 +3238,8 @@ namespace exprtk
                                  }
                               }
                               break;
+
+                     default: continue;
                   }
                }
             }
@@ -4815,6 +4818,26 @@ namespace exprtk
          inline const type_store& back() const
          {
             return parameter_list_.back();
+         }
+
+         inline std::vector<type_store>::const_iterator begin() const
+         {
+            return parameter_list_.begin();
+         }
+
+         inline std::vector<type_store>::const_iterator end() const
+         {
+            return parameter_list_.end();
+         }
+
+         inline std::vector<type_store>::iterator begin()
+         {
+            return parameter_list_.begin();
+         }
+
+         inline std::vector<type_store>::iterator end()
+         {
+            return parameter_list_.end();
          }
 
       private:
@@ -14281,7 +14304,7 @@ namespace exprtk
          typedef vector_holder   <T>  vector_holder_t;
          typedef vector_holder_t*     vector_holder_ptr;
          typedef vec_data_store  <T>  vds_t;
-         typedef memory_context_t<T> memory_context;
+         typedef memory_context_t<T>  memory_context;
          typedef std::pair<expression_ptr,bool> branch_t;
 
          conditional_vector_node(expression_ptr condition,
@@ -19813,6 +19836,32 @@ namespace exprtk
 
       std::string parameter_sequence;
       return_type rtrn_type;
+
+      static inline std::string generate_prefix_args(const std::string prefix_args, std::size_t start = 0, std::size_t end = 10)
+      {
+         std::string result;
+
+         for (std::size_t i = start; i <= end; ++i)
+         {
+            result += prefix_args + std::string(i,'?');
+            result += (i != end) ? "|" : "";
+         }
+
+         return result;
+      }
+
+      static inline std::string generate_suffix_args(const std::string suffix_args, std::size_t start = 0, std::size_t end = 10)
+      {
+         std::string result;
+
+         for (std::size_t i = start; i <= end; ++i)
+         {
+            result += std::string(i,'?') + suffix_args;
+            result += (i != end) ? "|" : "";
+         }
+
+         return result;
+      }
    };
 
    #ifndef exprtk_disable_string_capabilities
@@ -20362,10 +20411,10 @@ namespace exprtk
          {
             struct init_type
             {
-               static inline double set(double)           { return (0.0);           }
-               static inline double set(long double)      { return (0.0);           }
-               static inline float  set(float)            { return (0.0f);          }
-               static inline std::string set(std::string) { return std::string(""); }
+               static inline double set(double)            { return (0.0);           }
+               static inline double set(long double)       { return (0.0);           }
+               static inline float  set(float)             { return (0.0f);          }
+               static inline std::string set(std::string&) { return std::string(""); }
             };
 
             static RawType null_type = init_type::set(RawType());
@@ -25180,7 +25229,7 @@ namespace exprtk
          inline void set(const precedence_level& l,
                          const precedence_level& r,
                          const details::operator_type& o,
-                         const token_t tkn = token_t())
+                         const token_t& tkn = token_t())
          {
             left      = l;
             right     = r;
@@ -28305,8 +28354,8 @@ namespace exprtk
          return error_node();
       }
 
-      inline expression_node_ptr synthesize_vector_element(const std::string& vector_name,
-                                                           vector_holder_ptr vec,
+      inline expression_node_ptr synthesize_vector_element(const std::string&  vector_name,
+                                                           vector_holder_ptr   vec,
                                                            expression_node_ptr vec_node,
                                                            expression_node_ptr index_expr)
       {
@@ -46114,6 +46163,134 @@ namespace exprtk
    };
 
    template <typename T>
+   class min_elemwise exprtk_final : public exprtk::igeneric_function<T>
+   {
+   public:
+
+      typedef typename exprtk::igeneric_function<T> igfun_t;
+      typedef typename igfun_t::parameter_list_t    parameter_list_t;
+      typedef typename igfun_t::generic_type        generic_type;
+      typedef typename generic_type::scalar_view    scalar_t;
+      typedef typename generic_type::vector_view    vector_t;
+
+      using igfun_t::operator();
+
+      min_elemwise()
+      : exprtk::igeneric_function<T>("VT|VVT|VTTT|VVTTT")
+      /*
+         Overloads:
+         0. VT    - vector, T
+         0. VVT   - vector, vector, T
+         0. VTTT  - vector, r0, r1, T
+         0. VVTTT - vector, vector, r0, r1, T
+      */
+      {}
+
+      inline T operator() (const std::size_t& ps_index, parameter_list_t parameters) exprtk_override
+      {
+         std::size_t out_vec_index = 0;
+         std::size_t in_vec_index  = (ps_index & 1) ? 1 : 0;
+         std::size_t scalar_index  = parameters.size() - 1;
+
+         vector_t out_vec(parameters[out_vec_index]);
+         vector_t in_vec (parameters[in_vec_index ]);
+
+         const T s = scalar_t(parameters[scalar_index ])();
+
+         std::size_t r0 = 0;
+         std::size_t r1 = in_vec.size() - 1;
+
+         if ((2 == ps_index) || (3 == ps_index))
+         {
+            std::size_t rng_idx0 = 0;
+            std::size_t rng_idx1 = 0;
+
+            switch (ps_index)
+            {
+               case 2 : { rng_idx0 = 1; rng_idx1 = 2; }; break;
+               case 3 : { rng_idx0 = 2; rng_idx1 = 3; }; break;
+            }
+
+            if (!helper::load_vector_range<T>::process(parameters, r0, r1, rng_idx0, rng_idx1, 0))
+            {
+               return T(0);
+            }
+         }
+
+         for (std::size_t i = r0; i <= r1; ++i)
+         {
+            out_vec[i] = exprtk::details::numeric::min(in_vec[i], s);
+         }
+
+         return T(1);
+      }
+   };
+
+   template <typename T>
+   class max_elemwise exprtk_final : public exprtk::igeneric_function<T>
+   {
+   public:
+
+      typedef typename exprtk::igeneric_function<T> igfun_t;
+      typedef typename igfun_t::parameter_list_t    parameter_list_t;
+      typedef typename igfun_t::generic_type        generic_type;
+      typedef typename generic_type::scalar_view    scalar_t;
+      typedef typename generic_type::vector_view    vector_t;
+
+      using igfun_t::operator();
+
+      max_elemwise()
+      : exprtk::igeneric_function<T>("VT|VVT|VTTT|VVTTT")
+      /*
+         Overloads:
+         0. VT    - vector, T
+         1. VVT   - vector, vector, T
+         2. VTTT  - vector, r0, r1, T
+         3. VVTTT - vector, vector, r0, r1, T
+      */
+      {}
+
+      inline T operator() (const std::size_t& ps_index, parameter_list_t parameters) exprtk_override
+      {
+         std::size_t out_vec_index = 0;
+         std::size_t in_vec_index  = (ps_index & 1) ? 1 : 0;
+         std::size_t scalar_index  = parameters.size() - 1;
+
+         vector_t out_vec(parameters[out_vec_index]);
+         vector_t in_vec (parameters[in_vec_index ]);
+
+         const T s = scalar_t(parameters[scalar_index ])();
+
+         std::size_t r0 = 0;
+         std::size_t r1 = in_vec.size() - 1;
+
+         if ((2 == ps_index) || (3 == ps_index))
+         {
+            std::size_t rng_idx0 = 0;
+            std::size_t rng_idx1 = 0;
+
+            switch (ps_index)
+            {
+               case 2 : { rng_idx0 = 1; rng_idx1 = 2; }; break;
+               case 3 : { rng_idx0 = 2; rng_idx1 = 3; }; break;
+            }
+
+            if (!helper::load_vector_range<T>::process(parameters, r0, r1, rng_idx0, rng_idx1, 0))
+            {
+               return T(0);
+            }
+         }
+
+         for (std::size_t i = r0; i <= r1; ++i)
+         {
+            out_vec[i] = exprtk::details::numeric::max(in_vec[i], s);
+         }
+
+         return T(1);
+      }
+   };
+
+   template <typename T>
    struct package
    {
       all_true       <T> at;
@@ -46144,6 +46321,8 @@ namespace exprtk
       dotk           <T> dtk;
       threshold_above<T> ta;
       threshold_below<T> tb;
+      min_elemwise<T>    miew;
+      max_elemwise<T>    maew;
 
       bool register_package(exprtk::symbol_table<T>& symtab)
       {
@@ -46186,6 +46365,9 @@ namespace exprtk
          exprtk_register_function("dotk"            , dtk       )
          exprtk_register_function("threshold_above" , ta        )
          exprtk_register_function("threshold_below" , tb        )
+         exprtk_register_function("min_elemwise"    , miew      )
+         exprtk_register_function("max_elemwise"    , maew      )
+
          #undef exprtk_register_function
 
          return true;

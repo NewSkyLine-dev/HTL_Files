@@ -1,5 +1,0 @@
-D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/CMakeFiles/Calculator.dir
-D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/CMakeFiles/Taschenrechner.dir
-D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/CMakeFiles/deploy_qt.dir
-D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/CMakeFiles/ALL_BUILD.dir
-D:/Schule/HTL_Files/POS/C++ 5/Taschenrechner/build/CMakeFiles/ZERO_CHECK.dir
