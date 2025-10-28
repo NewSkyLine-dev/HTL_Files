@@ -17,11 +17,22 @@ public:
     ~Formel1();
 	void initChart();
 
+private slots:
+    void onDriverSelected();
+
 private:
     QLineEdit* m_nameInput;
     QComboBox* m_searchResults;
     QChartView* m_chartView;
     QChart* m_chart;
     QLineSeries* m_series;
+
+    // Driver Info Labels (displayed)
+    QLabel* nameUnderLabel;
+	QLabel* surnameUnderLabel;
+    QLabel* birthDateUnderLabel;
+	QLabel* nationalityUnderLabel;
+	QLabel* countDrivesUnderLabel;
+	QLabel* teamUnderLabel;
 };
 

@@ -2,10 +2,22 @@
 
 #include <QString>
 
-class QX_FORMEL_1_DLL_EXPORT Drivers
+class Drivers
 {
 public:
 	Drivers() : driverId(0) { ; }
+	Drivers(long driverId, const QString &driverRef, const QString &number, const QString &code, const QString &forename, const QString &surname,
+			const QString &dob, const QString &nationality, const QString &url) :
+		driverId(driverId),
+		driverRef(driverRef),
+		number(number),
+		code(code),
+		forename(forename),
+		surname(surname),
+		dob(dob),
+		nationality(nationality),
+		url(url) { ; }
+		
 	virtual ~Drivers() { ; }
 	long driverId;
 	QString driverRef;
@@ -20,5 +32,3 @@ public:
 
 
 QX_REGISTER_HPP_QX_FORMEL_1(Drivers, qx::trait::no_base_class_defined, 1)
-
-typedef std::shared_ptr<Drivers> driver_ptr;
