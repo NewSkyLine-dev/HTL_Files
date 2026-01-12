@@ -1,0 +1,19 @@
+<diagram program="umletino" version="15.0.0"><zoom_level>19</zoom_level><element><id>UMLClass</id><coordinates><x>208</x><y>191</y><w>513</w><h>418</h></coordinates><panel_attributes>_class TicTacTo_
+--
+- player1_: string
+- player2_: string
+- board_[3][3]: char[3][3]
+- currentPlayer_: char
+- initializeBoard(): void
+- printBoard(): void
+- checkWin();
+- checkTie(): bool
+- makeMove(int x, int y): bool
+- switchPlayer(): void
+--
++ TicTacToe(player1: string, player2: string);
++ play(): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>208</x><y>20</y><w>399</w><h>133</h></coordinates><panel_attributes>_struct Player_
+--
+- int: field
+- string: PlayerName
+- bool: win</panel_attributes><additional_attributes></additional_attributes></element></diagram>

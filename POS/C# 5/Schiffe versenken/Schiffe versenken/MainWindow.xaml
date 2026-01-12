@@ -1,0 +1,143 @@
+﻿<Window x:Class="Schiffe_versenken.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Schiffe_versenken"
+        xmlns:views="clr-namespace:Schiffe_versenken.Views"
+        mc:Ignorable="d"
+        Title="Schiffe versenken" Height="700" Width="1200" MinHeight="600" MinWidth="900">
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Verbindungs-Panel -->
+        <Border Grid.Row="0" Background="#F0F0F0" CornerRadius="5" Padding="10" Margin="0,0,0,10"
+                Visibility="{Binding IsConnectionPhase, Converter={StaticResource BoolToVisibilityConverter}}">
+            <StackPanel>
+                <TextBlock Text="Netzwerk-Verbindung" FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Host starten -->
+                    <StackPanel Grid.Column="0">
+                        <TextBlock Text="Als Host starten:" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="Port:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                            <TextBox Text="{Binding ConnectionPort}" Width="80"/>
+                        </StackPanel>
+                        <Button Content="Host starten" Command="{Binding StartAsHostCommand}" Margin="0,10,0,0" Padding="10,5"/>
+                    </StackPanel>
+
+                    <Border Grid.Column="1" Width="1" Background="Gray" Margin="20,0"/>
+
+                    <!-- Mit Host verbinden -->
+                    <StackPanel Grid.Column="2">
+                        <TextBlock Text="Mit Host verbinden:" FontWeight="Bold"/>
+                        <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                            <TextBlock Text="IP:" VerticalAlignment="Center" Margin="0,0,5,0"/>
+                            <TextBox Text="{Binding ConnectionAddress}" Width="120"/>
+                            <TextBlock Text="Port:" VerticalAlignment="Center" Margin="10,0,5,0"/>
+                            <TextBox Text="{Binding ConnectionPort}" Width="80"/>
+                        </StackPanel>
+                        <Button Content="Verbinden" Command="{Binding ConnectToHostCommand}" Margin="0,10,0,0" Padding="10,5"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Border>
+
+        <!-- Setup-Panel für Schiffsplatzierung -->
+        <Border Grid.Row="1" Background="#E8F4E8" CornerRadius="5" Padding="10" Margin="0,0,0,10"
+                Visibility="{Binding IsSetupPhase, Converter={StaticResource BoolToVisibilityConverter}}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Schiffe zum Platzieren -->
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Zu platzierende Schiffe:" FontWeight="Bold" Margin="0,0,0,5"/>
+                    <ItemsControl ItemsSource="{Binding ShipsToPlace}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Margin="2" Padding="5,2" CornerRadius="3" 
+                                        Background="{Binding IsPlaced, Converter={StaticResource PlacedToColorConverter}}"
+                                        BorderBrush="Gray" BorderThickness="1"
+                                        Cursor="Hand">
+                                    <Border.InputBindings>
+                                        <MouseBinding MouseAction="LeftClick" 
+                                                      Command="{Binding DataContext.SelectShipCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                      CommandParameter="{Binding}"/>
+                                    </Border.InputBindings>
+                                    <TextBlock>
+                                        <Run Text="{Binding Name}"/>
+                                        <Run Text=" ("/>
+                                        <Run Text="{Binding Size}"/>
+                                        <Run Text=")"/>
+                                    </TextBlock>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <!-- Ausrichtung und Aktionen -->
+                <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0">
+                    <Button Content="Drehen (R)" Command="{Binding RotateShipCommand}" Padding="10,5" Margin="0,0,10,0"/>
+                    <TextBlock VerticalAlignment="Center" Margin="0,0,10,0">
+                        <Run Text="Ausrichtung: "/>
+                        <Run Text="{Binding IsPlacingHorizontal, Converter={StaticResource OrientationConverter}}" FontWeight="Bold"/>
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Content="Reset" Command="{Binding ResetBoardCommand}" Padding="10,5" Margin="0,0,10,0"/>
+                    <Button Content="Bereit!" Command="{Binding StartGameCommand}" Padding="15,5" FontWeight="Bold"
+                            Background="#4CAF50" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Spielfelder -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Eigenes Spielfeld -->
+            <Border Grid.Column="1" BorderBrush="Navy" BorderThickness="2" CornerRadius="5" Padding="10">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Eigenes Spielfeld" FontSize="16" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,10"/>
+                    <views:BoardView Grid.Row="1" DataContext="{Binding OwnBoardViewModel}"/>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <!-- Status-Leiste -->
+        <Border Grid.Row="3" Background="#333" CornerRadius="5" Padding="15" Margin="0,10,0,0">
+            <TextBlock Text="{Binding StatusMessage}" Foreground="White" FontSize="14" HorizontalAlignment="Center"/>
+        </Border>
+    </Grid>
+</Window>

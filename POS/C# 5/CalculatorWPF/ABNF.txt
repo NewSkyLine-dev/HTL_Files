@@ -1,0 +1,32 @@
+; ABNF Grammar for Calculator with Variables
+; Supports: + - * / ^ (power), parentheses, and variables with assignment
+
+; Entry point - either an assignment or an expression
+statement      = assignment / expression
+
+; Assignment assigns a value to a variable
+assignment     = variable "=" expression
+
+; Expression handles addition and subtraction (lowest precedence)
+expression     = term *( ("+" / "-") term )
+
+; Term handles multiplication and division (higher precedence than +/-)
+term           = power *( ("*" / "/") power )
+
+; Power handles exponentiation (right-associative, highest precedence)
+power          = unary ["^" power]
+
+; Unary handles negation
+unary          = ["-"] factor
+
+; Factor is either a number, variable, or parenthesized expression
+factor         = number / variable / "(" expression ")"
+
+; Number is a decimal number
+number         = 1*DIGIT ["." 1*DIGIT]
+
+; Variable is a single lowercase letter
+variable       = %x61-7A  ; a-z (lowercase letters)
+
+; Standard ABNF core rules
+DIGIT          = %x30-39  ; 0-9

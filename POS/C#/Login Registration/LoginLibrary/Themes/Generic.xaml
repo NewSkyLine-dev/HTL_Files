@@ -1,0 +1,240 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:LoginLibrary">
+    <Style TargetType="{x:Type local:LoginControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:LoginControl}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  Username/Email field  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="{TemplateBinding IdentifierLabel}" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,0,0,5"
+                            Text="{Binding Identifier, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                        <!--  Password field  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="Password:" />
+                        <PasswordBox
+                            x:Name="PART_PasswordBox"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="0,0,0,5" />
+
+                        <!--  Error message  -->
+                        <TextBlock
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"
+                            Foreground="Red"
+                            Text="{TemplateBinding ErrorMessage}"
+                            Visibility="{TemplateBinding ErrorVisibility}" />
+
+                        <!--  Buttons  -->
+                        <StackPanel
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <Button
+                                x:Name="PART_LoginButton"
+                                Width="80"
+                                Margin="0,0,10,0"
+                                Content="Login" />
+                            <Button
+                                x:Name="PART_SwitchToRegisterButton"
+                                Width="80"
+                                Margin="0,0,10,0"
+                                Content="Register" />
+                            <Button
+                                x:Name="PART_SwitchIdentifier"
+                                Width="80"
+                                Content="Switch" />
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type local:RegistrationControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:RegistrationControl}">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <!--  First name  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="First Name:" />
+                        <TextBox
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="0,0,0,5"
+                            Text="{Binding FirstName, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                        <!--  Last name  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="Last Name:" />
+                        <TextBox
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="0,0,0,5"
+                            Text="{Binding LastName, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                        <!--  Identifier  -->
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="{TemplateBinding IdentifierLabel}" />
+                        <TextBox
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Margin="0,0,0,5"
+                            Text="{Binding Identifier, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                        <!--  Username (optional)  -->
+                        <Label
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="Username:"
+                            Visibility="{TemplateBinding UsernameVisibility}" />
+                        <TextBox
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Margin="0,0,0,5"
+                            Text="{Binding Username, RelativeSource={RelativeSource TemplatedParent}}"
+                            Visibility="{TemplateBinding UsernameVisibility}" />
+
+                        <!--  Password  -->
+                        <Label
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="Password:" />
+                        <PasswordBox
+                            x:Name="PART_PasswordBox"
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Margin="0,0,0,5" />
+
+                        <!--  Confirm Password  -->
+                        <Label
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="Confirm Password:" />
+                        <PasswordBox
+                            x:Name="PART_ConfirmPasswordBox"
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Margin="0,0,0,5" />
+
+                        <!--  Address  -->
+                        <Label
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Margin="0,0,10,5"
+                            Content="Address:" />
+                        <TextBox
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            Height="60"
+                            Margin="0,0,0,5"
+                            AcceptsReturn="True"
+                            Text="{Binding Address, RelativeSource={RelativeSource TemplatedParent}}" />
+
+                        <!--  Error message  -->
+                        <TextBlock
+                            Grid.Row="7"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Margin="0,0,0,10"
+                            Foreground="Red"
+                            Text="{TemplateBinding ErrorMessage}"
+                            Visibility="{TemplateBinding ErrorVisibility}" />
+
+                        <!--  Buttons  -->
+                        <StackPanel
+                            Grid.Row="8"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            HorizontalAlignment="Right"
+                            Orientation="Horizontal">
+                            <Button
+                                x:Name="PART_RegisterButton"
+                                Width="80"
+                                Margin="0,0,10,0"
+                                Content="Register" />
+                            <Button
+                                x:Name="PART_ResetButton"
+                                Width="80"
+                                Margin="0,0,10,0"
+                                Content="Reset" />
+                            <Button
+                                x:Name="PART_CancelButton"
+                                Width="80"
+                                Margin="0,0,10,0"
+                                Content="Cancel" />
+                            <Button
+                                x:Name="PART_SwitchToLogin"
+                                Width="80"
+                                Margin="0,0,10,0"
+                                Content="Back to Login" />
+                            <Button
+                                x:Name="PART_SwitchIdentifier"
+                                Width="80"
+                                Content="Switch" />
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

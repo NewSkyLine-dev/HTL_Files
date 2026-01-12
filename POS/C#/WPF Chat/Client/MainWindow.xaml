@@ -1,0 +1,202 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="WPF Chat Client"
+        Height="700"
+        Width="1200"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Menu Bar -->
+        <Menu Grid.Row="0">
+            <MenuItem Header="_Connection">
+                <MenuItem x:Name="ConnectMenuItem"
+                          Header="_Connect..."
+                          Click="ConnectMenuItem_Click"/>
+                <MenuItem x:Name="DisconnectMenuItem"
+                          Header="_Disconnect"
+                          Click="DisconnectMenuItem_Click"
+                          IsEnabled="False"/>
+                <Separator/>
+                <MenuItem Header="E_xit"
+                          Click="ExitMenuItem_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Profile">
+                <MenuItem x:Name="ChangeColorMenuItem"
+                          Header="Change _Color..."
+                          Click="ChangeColorMenuItem_Click"
+                          IsEnabled="False"/>
+                <MenuItem x:Name="ChangeProfilePictureMenuItem"
+                          Header="Change _Profile Picture..."
+                          Click="ChangeProfilePictureMenuItem_Click"
+                          IsEnabled="False"/>
+            </MenuItem>
+            <MenuItem Header="_Rooms">
+                <MenuItem x:Name="JoinRoomMenuItem"
+                          Header="_Join Room..."
+                          Click="JoinRoomMenuItem_Click"
+                          IsEnabled="False"/>
+                <MenuItem x:Name="CreateRoomMenuItem"
+                          Header="_Create Room..."
+                          Click="CreateRoomMenuItem_Click"
+                          IsEnabled="False"/>
+            </MenuItem>
+        </Menu>
+
+        <!-- Main Content Area -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="5"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Left Panel - Rooms and Users -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Chat Rooms -->
+                <GroupBox Grid.Row="0"
+                          Header="💬 Chat Rooms">
+                    <ListBox x:Name="RoomsListBox"
+                             SelectionChanged="RoomsListBox_SelectionChanged">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse Width="8"
+                                             Height="8"
+                                             Fill="Green"
+                                             Margin="0,0,5,0"/>
+                                    <TextBlock Text="{Binding Name}"
+                                               FontWeight="Bold"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </GroupBox>
+
+                <GridSplitter Grid.Row="1"
+                              HorizontalAlignment="Stretch"
+                              Background="LightGray"/>
+
+                <!-- Online Users -->
+                <GroupBox Grid.Row="2"
+                          Header="👥 Online Users">
+                    <ListBox x:Name="UsersListBox"
+                             MouseDoubleClick="UsersListBox_MouseDoubleClick">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse Width="32"
+                                             Height="32"
+                                             Margin="0,0,5,0">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{Binding ProfileImage}"
+                                                        Stretch="UniformToFill"/>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Username}"
+                                                   FontWeight="Bold"/>
+                                        <TextBlock Text="{Binding Status}"
+                                                   FontSize="10"
+                                                   Foreground="Gray"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </GroupBox>
+            </Grid>
+
+            <GridSplitter Grid.Column="1"
+                          HorizontalAlignment="Stretch"
+                          Background="LightGray"/>
+
+            <!-- Center Panel - Chat Tabs -->
+            <TabControl x:Name="ChatTabControl"
+                        Grid.Column="2">
+                <!-- Dynamic tabs will be added here -->
+            </TabControl>
+
+            <GridSplitter Grid.Column="3"
+                          HorizontalAlignment="Stretch"
+                          Background="LightGray"/>
+
+            <!-- Right Panel - User Info -->
+            <GroupBox Grid.Column="4"
+                      Header="👤 Profile">
+                <StackPanel Margin="10">
+                    <Border Background="LightBlue"
+                            CornerRadius="5"
+                            Padding="10"
+                            Margin="0,0,0,10">
+                        <StackPanel HorizontalAlignment="Center">
+                            <Ellipse x:Name="ProfileImageEllipse"
+                                     Width="80"
+                                     Height="80"
+                                     Margin="0,0,0,10">
+                                <Ellipse.Fill>
+                                    <ImageBrush x:Name="ProfileImageBrush"
+                                                Stretch="UniformToFill"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
+                            <TextBlock x:Name="UsernameText"
+                                       Text="Not connected"
+                                       FontWeight="Bold"
+                                       HorizontalAlignment="Center"/>
+                            <Rectangle x:Name="UserColorRectangle"
+                                       Width="60"
+                                       Height="20"
+                                       Margin="0,5,0,0"/>
+                        </StackPanel>
+                    </Border>
+
+                    <TextBlock Text="Connection Status:"
+                               FontWeight="Bold"
+                               Margin="0,10,0,0"/>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="0,5,0,0">
+                        <Ellipse x:Name="ConnectionStatusIndicator"
+                                 Width="10"
+                                 Height="10"
+                                 Fill="Red"
+                                 Margin="0,0,5,0"/>
+                        <TextBlock x:Name="ConnectionStatusText"
+                                   Text="Disconnected"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Server:"
+                               FontWeight="Bold"
+                               Margin="0,10,0,0"/>
+                    <TextBlock x:Name="ServerInfoText"
+                               Text="Not connected"
+                               FontSize="11"/>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+
+        <!-- Status Bar -->
+        <StatusBar Grid.Row="2">
+            <StatusBarItem>
+                <TextBlock x:Name="StatusBarText"
+                           Text="Ready - Not connected"/>
+            </StatusBarItem>
+            <Separator/>
+            <StatusBarItem HorizontalAlignment="Right">
+                <TextBlock x:Name="TimeText"/>
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+</Window>

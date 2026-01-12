@@ -1,0 +1,33 @@
+﻿<Window x:Class="PixelDraw_2024.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PixelDraw_2024"
+        mc:Ignorable="d"
+        Title="Drawing" Height="450" Width="800">
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="5px">
+            <!--<Button Content="Draw" Padding="5px" Name="button1" VerticalAlignment="Top" Click="Button1_Click" />-->
+            <Label Content="Color: " />
+            <ComboBox Margin="0,0,10,0" SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged" x:Name="ColorCB">
+                <ComboBoxItem>Black</ComboBoxItem>
+                <ComboBoxItem>Red</ComboBoxItem>
+                <ComboBoxItem>Green</ComboBoxItem>
+                <ComboBoxItem>Blue</ComboBoxItem>
+            </ComboBox>
+
+            <Label Content="Type: "/>
+            <ComboBox Margin="0,0,10,0"  SelectedIndex="0" SelectionChanged="ComboBox_SelectionChanged_1" x:Name="TypeCB">
+                <ComboBoxItem>Draw</ComboBoxItem>
+                <ComboBoxItem>Fill</ComboBoxItem>
+            </ComboBox>
+
+            <Button Content="Set Start Point" Click="Button_SetStart" Margin="0,0,10,0"/>
+            <Button Content="Set End Point" Click="Button_SetEnd" Margin="0,0,10,0"/>
+            <Button Content="Dijkstra Algorithm" Click="Dijkstra_Click"/>
+        </StackPanel>
+        <Image Name="drawing" Stretch="Uniform" MouseLeftButtonDown="drawing_MouseLeftButtonDown"/>
+
+    </DockPanel>
+</Window>

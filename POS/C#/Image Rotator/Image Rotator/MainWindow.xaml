@@ -1,0 +1,44 @@
+﻿<Window x:Class="Image_Rotator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Image_Rotator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="Spiegeln:"/>
+            <ComboBox x:Name="MirrorCB" SelectedIndex="0">
+                <ComboBoxItem Content="Horizontal"/>
+                <ComboBoxItem Content="Vertikal"/>
+            </ComboBox>
+
+            <TextBlock Text="Drehen:" />
+            <ComboBox x:Name="RotationCB" SelectedIndex="0">
+                <ComboBoxItem Content="0"/>
+                <ComboBoxItem Content="90"/>
+                <ComboBoxItem Content="180"/>
+                <ComboBoxItem Content="270"/>
+            </ComboBox>
+
+            <TextBlock Text="Qualität:" />
+            <Slider x:Name="QualitySlider" Minimum="30" Maximum="100" Width="Auto" TickFrequency="1" IsSnapToTickEnabled="True"/>
+            <TextBlock Text="{Binding Value, ElementName=QualitySlider}"/>
+
+            <Button Content="Ordner auswählen" Click="Button_Click"/>
+            <Button Content="Prozess starten" Click="Button_Click_1"/>
+
+            <ProgressBar x:Name="ProgressBar" Value="0" Maximum="100" Height="20" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1">
+            <ListBox x:Name="ImageList" Height="Auto" ItemsSource="{Binding ImagePaths}"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Flugplaner", "Flugplaner\Flugplaner.vcxproj", "{60C9C5BD-A131-4B7F-9B69-A1CE778D2E7D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60C9C5BD-A131-4B7F-9B69-A1CE778D2E7D}.Debug|x64.ActiveCfg = Debug|x64
+		{60C9C5BD-A131-4B7F-9B69-A1CE778D2E7D}.Debug|x64.Build.0 = Debug|x64
+		{60C9C5BD-A131-4B7F-9B69-A1CE778D2E7D}.Release|x64.ActiveCfg = Release|x64
+		{60C9C5BD-A131-4B7F-9B69-A1CE778D2E7D}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {024E37C6-FD0E-40C5-A705-4AC82E603083}
+	EndGlobalSection
+EndGlobal

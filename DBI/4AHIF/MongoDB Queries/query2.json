@@ -1,0 +1,364 @@
+[{
+  "presidents": [
+    {
+      "PRES_NAME": "Washington G",
+      "BIRTH_YEAR": 1732,
+      "YEARS_SERV": 7,
+      "DEATH_AGE": 67,
+      "PARTY": "Federalist",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Adams J",
+      "BIRTH_YEAR": 1735,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 90,
+      "PARTY": "Federalist",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Jefferson T",
+      "BIRTH_YEAR": 1743,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 83,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Madison J",
+      "BIRTH_YEAR": 1751,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 85,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Monroe J",
+      "BIRTH_YEAR": 1758,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 73,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Adams J Q",
+      "BIRTH_YEAR": 1767,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 80,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Jackson A",
+      "BIRTH_YEAR": 1767,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 78,
+      "PARTY": "Democratic",
+      "STATE_BORN": "South Carolina"
+    },
+    {
+      "PRES_NAME": "Van Buren M",
+      "BIRTH_YEAR": 1782,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 79,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Harrison W H",
+      "BIRTH_YEAR": 1773,
+      "YEARS_SERV": 0,
+      "DEATH_AGE": 68,
+      "PARTY": "Whig",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Tyler J",
+      "BIRTH_YEAR": 1790,
+      "YEARS_SERV": 3,
+      "DEATH_AGE": 71,
+      "PARTY": "Whig",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Polk J K",
+      "BIRTH_YEAR": 1795,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 53,
+      "PARTY": "Democratic",
+      "STATE_BORN": "North Carolina"
+    },
+    {
+      "PRES_NAME": "Taylor Z",
+      "BIRTH_YEAR": 1784,
+      "YEARS_SERV": 1,
+      "DEATH_AGE": 65,
+      "PARTY": "Whig",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Fillmore M",
+      "BIRTH_YEAR": 1800,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": 74,
+      "PARTY": "Whig",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Pierce F",
+      "BIRTH_YEAR": 1804,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 64,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New Hampshire"
+    },
+    {
+      "PRES_NAME": "Buchanan J",
+      "BIRTH_YEAR": 1791,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 77,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Pennsylvania"
+    },
+    {
+      "PRES_NAME": "Lincoln A",
+      "BIRTH_YEAR": 1809,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 56,
+      "PARTY": "Republican",
+      "STATE_BORN": "Kentucky"
+    },
+    {
+      "PRES_NAME": "Johnson A",
+      "BIRTH_YEAR": 1808,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 66,
+      "PARTY": "Democratic",
+      "STATE_BORN": "North Carolina"
+    },
+    {
+      "PRES_NAME": "Grant U S",
+      "BIRTH_YEAR": 1822,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 63,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Hayes R B",
+      "BIRTH_YEAR": 1822,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 70,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Garfield J A",
+      "BIRTH_YEAR": 1831,
+      "YEARS_SERV": 0,
+      "DEATH_AGE": 49,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Arthur C A",
+      "BIRTH_YEAR": 1829,
+      "YEARS_SERV": 3,
+      "DEATH_AGE": 57,
+      "PARTY": "Republican",
+      "STATE_BORN": "Vermont"
+    },
+    {
+      "PRES_NAME": "Cleveland G",
+      "BIRTH_YEAR": 1837,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 71,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New Jersey"
+    },
+    {
+      "PRES_NAME": "Harrison B",
+      "BIRTH_YEAR": 1833,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 67,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "McKinley W",
+      "BIRTH_YEAR": 1843,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 58,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "BIRTH_YEAR": 1858,
+      "YEARS_SERV": 7,
+      "DEATH_AGE": 60,
+      "PARTY": "Republican",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Taft W H",
+      "BIRTH_YEAR": 1857,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 72,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "BIRTH_YEAR": 1856,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 67,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Harding W G",
+      "BIRTH_YEAR": 1865,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": 57,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "BIRTH_YEAR": 1872,
+      "YEARS_SERV": 5,
+      "DEATH_AGE": 60,
+      "PARTY": "Republican",
+      "STATE_BORN": "Vermont"
+    },
+    {
+      "PRES_NAME": "Hoover H",
+      "BIRTH_YEAR": 1874,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 90,
+      "PARTY": "Republican",
+      "STATE_BORN": "Iowa"
+    },
+    {
+      "PRES_NAME": "Roosevelt F D",
+      "BIRTH_YEAR": 1882,
+      "YEARS_SERV": 12,
+      "DEATH_AGE": 63,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Truman H S",
+      "BIRTH_YEAR": 1884,
+      "YEARS_SERV": 7,
+      "DEATH_AGE": 88,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Missouri"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "BIRTH_YEAR": 1890,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 78,
+      "PARTY": "Republican",
+      "STATE_BORN": "Texas"
+    },
+    {
+      "PRES_NAME": "Kennedy J F",
+      "BIRTH_YEAR": 1917,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": 46,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Johnson L B",
+      "BIRTH_YEAR": 1908,
+      "YEARS_SERV": 5,
+      "DEATH_AGE": 64,
+      "PARTY": "Democratic",
+      "STATE_BORN": "California"
+    },
+    {
+      "PRES_NAME": "Nixon R M",
+      "BIRTH_YEAR": 1913,
+      "YEARS_SERV": 5,
+      "DEATH_AGE": 81,
+      "PARTY": "Republican",
+      "STATE_BORN": "California"
+    },
+    {
+      "PRES_NAME": "Ford G R",
+      "BIRTH_YEAR": 1913,
+      "YEARS_SERV": 3,
+      "DEATH_AGE": 93,
+      "PARTY": "Republican",
+      "STATE_BORN": "Nebraska"
+    },
+    {
+      "PRES_NAME": "Carter J E",
+      "BIRTH_YEAR": 1924,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Georgia"
+    },
+    {
+      "PRES_NAME": "Reagan R W",
+      "BIRTH_YEAR": 1911,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 93,
+      "PARTY": "Republican",
+      "STATE_BORN": "Illinois"
+    },
+    {
+      "PRES_NAME": "Bush G H W",
+      "BIRTH_YEAR": 1924,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": null,
+      "PARTY": "Republican",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Clinton W J",
+      "BIRTH_YEAR": 1946,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Arkansas"
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "BIRTH_YEAR": 1946,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": null,
+      "PARTY": "Republican",
+      "STATE_BORN": "Texas"
+    },
+    {
+      "PRES_NAME": "Obama B H",
+      "BIRTH_YEAR": 1961,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Hawaii"
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "BIRTH_YEAR": 1946,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": null,
+      "PARTY": "Republican",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "BIRTH_YEAR": 1942,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Pennsylvania"
+    }
+  ]
+}]

@@ -1,0 +1,157 @@
+<Window x:Class="CalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="clr-namespace:CalculatorWPF.ViewModels"
+        Title="Calculator - Interpreter Pattern" 
+        Height="600" Width="500"
+        MinHeight="500" MinWidth="400"
+        WindowStartupLocation="CenterScreen">
+    
+    <Window.DataContext>
+        <vm:CalculatorViewModel/>
+    </Window.DataContext>
+    
+    <Window.Resources>
+        <Style x:Key="ButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+        
+        <Style x:Key="OperatorButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="#FF5722"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style x:Key="NumberButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="#424242"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style x:Key="SpecialButtonStyle" TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="Background" Value="#2196F3"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        
+        <!-- Expression Input -->
+        <GroupBox Grid.Row="0" Header="Expression (use variables a-z, assign with x = 5)" Margin="0,0,0,10">
+            <TextBox x:Name="ExpressionTextBox" 
+                     FontSize="24" 
+                     FontFamily="Consolas"
+                     Padding="10,5"
+                     Text="{Binding Expression, UpdateSourceTrigger=PropertyChanged}"
+                     KeyDown="ExpressionTextBox_KeyDown"/>
+        </GroupBox>
+        
+        <!-- Result Display -->
+        <GroupBox Grid.Row="1" Header="Result" Margin="0,0,0,10">
+            <TextBox FontSize="28" 
+                     FontFamily="Consolas"
+                     FontWeight="Bold"
+                     Padding="10,5"
+                     IsReadOnly="True"
+                     Background="#F5F5F5"
+                     Text="{Binding Result, Mode=OneWay}"/>
+        </GroupBox>
+        
+        <!-- Variables Display -->
+        <GroupBox Grid.Row="2" Header="Defined Variables" Margin="0,0,0,10">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Grid.Column="0"
+                         FontSize="14"
+                         FontFamily="Consolas"
+                         IsReadOnly="True"
+                         Background="#FFFDE7"
+                         Padding="5"
+                         Text="{Binding VariablesDisplay, Mode=OneWay}"/>
+                <Button Grid.Column="1" 
+                        Content="Clear" 
+                        Padding="10,5"
+                        Margin="5,0,0,0"
+                        Command="{Binding ClearVariablesCommand}"
+                        Style="{StaticResource SpecialButtonStyle}"/>
+            </Grid>
+        </GroupBox>
+        
+        <!-- Calculator Buttons -->
+        <GroupBox Grid.Row="3" Header="Input" Margin="0,0,0,10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- Row 0: Clear, (), ^, / -->
+                <Button Grid.Row="0" Grid.Column="0" Content="C" Command="{Binding ClearCommand}" Style="{StaticResource SpecialButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="1" Content="(" Command="{Binding InputCommand}" CommandParameter="(" Style="{StaticResource OperatorButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="2" Content=")" Command="{Binding InputCommand}" CommandParameter=")" Style="{StaticResource OperatorButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="3" Content="^" Command="{Binding InputCommand}" CommandParameter="^" Style="{StaticResource OperatorButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="4" Content="/" Command="{Binding InputCommand}" CommandParameter="/" Style="{StaticResource OperatorButtonStyle}"/>
+                
+                <!-- Row 1: 7, 8, 9, *, x -->
+                <Button Grid.Row="1" Grid.Column="0" Content="7" Command="{Binding InputCommand}" CommandParameter="7" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="1" Grid.Column="1" Content="8" Command="{Binding InputCommand}" CommandParameter="8" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="1" Grid.Column="2" Content="9" Command="{Binding InputCommand}" CommandParameter="9" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="1" Grid.Column="3" Content="*" Command="{Binding InputCommand}" CommandParameter="*" Style="{StaticResource OperatorButtonStyle}"/>
+                <Button Grid.Row="1" Grid.Column="4" Content="x" Command="{Binding InputCommand}" CommandParameter="x" Style="{StaticResource SpecialButtonStyle}" ToolTip="Variable x"/>
+                
+                <!-- Row 2: 4, 5, 6, -, y -->
+                <Button Grid.Row="2" Grid.Column="0" Content="4" Command="{Binding InputCommand}" CommandParameter="4" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="2" Grid.Column="1" Content="5" Command="{Binding InputCommand}" CommandParameter="5" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="2" Grid.Column="2" Content="6" Command="{Binding InputCommand}" CommandParameter="6" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="2" Grid.Column="3" Content="-" Command="{Binding InputCommand}" CommandParameter="-" Style="{StaticResource OperatorButtonStyle}"/>
+                <Button Grid.Row="2" Grid.Column="4" Content="y" Command="{Binding InputCommand}" CommandParameter="y" Style="{StaticResource SpecialButtonStyle}" ToolTip="Variable y"/>
+                
+                <!-- Row 3: 1, 2, 3, +, = (assignment) -->
+                <Button Grid.Row="3" Grid.Column="0" Content="1" Command="{Binding InputCommand}" CommandParameter="1" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="3" Grid.Column="1" Content="2" Command="{Binding InputCommand}" CommandParameter="2" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="3" Grid.Column="2" Content="3" Command="{Binding InputCommand}" CommandParameter="3" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="3" Grid.Column="3" Content="+" Command="{Binding InputCommand}" CommandParameter="+" Style="{StaticResource OperatorButtonStyle}"/>
+                <Button Grid.Row="3" Grid.Column="4" Content="=" Command="{Binding InputCommand}" CommandParameter="=" Style="{StaticResource OperatorButtonStyle}" ToolTip="Assignment (e.g. x = 5)"/>
+                
+                <!-- Row 4: 0, ., Calculate -->
+                <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Command="{Binding InputCommand}" CommandParameter="0" Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="4" Grid.Column="2" Content="." Command="{Binding InputCommand}" CommandParameter="." Style="{StaticResource NumberButtonStyle}"/>
+                <Button Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="2" Content="Calculate" Command="{Binding CalculateCommand}" Background="#4CAF50" Foreground="White" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+        </GroupBox>
+        
+        <!-- AST Display -->
+        <Expander Grid.Row="4" Header="AST Tree (Debug)" IsExpanded="False">
+            <TextBox FontSize="12"
+                     FontFamily="Consolas"
+                     IsReadOnly="True"
+                     Height="150"
+                     VerticalScrollBarVisibility="Auto"
+                     HorizontalScrollBarVisibility="Auto"
+                     Background="#263238"
+                     Foreground="#80CBC4"
+                     Padding="5"
+                     Text="{Binding AstTree, Mode=OneWay}"/>
+        </Expander>
+    </Grid>
+</Window>

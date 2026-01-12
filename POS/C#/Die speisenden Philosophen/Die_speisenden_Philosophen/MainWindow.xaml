@@ -1,0 +1,68 @@
+﻿<Window x:Class="Die_speisenden_Philosophen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Die_speisenden_Philosophen"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid Margin="0,0,0,215">
+            <Grid Margin="0,0,400,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="Aristoteles"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Platon"/>
+                <Label Grid.Column="0" Grid.Row="2" Content="Diogenes"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="Sokrates"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="Kant"/>
+                <TextBox x:Name="status1" Grid.Column="1" Grid.Row="0" Margin="0,0,5,0"/>
+                <TextBox x:Name="status2" Grid.Column="1" Grid.Row="1" Margin="0,0,5,0"/>
+                <TextBox x:Name="status3" Grid.Column="1" Grid.Row="2" Margin="0,0,5,0"/>
+                <TextBox x:Name="status4" Grid.Column="1" Grid.Row="3" Margin="0,0,5,0"/>
+                <TextBox x:Name="status5" Grid.Column="1" Grid.Row="4" Margin="0,0,5,0"/>
+            </Grid>
+            <Grid Margin="400,0,0,0" HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0" Content="Durchschnittszeit"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="Denk-Varianz"/>
+                <Label Grid.Column="0" Grid.Row="2" Content="Essensdurchschnitt"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="Essens-Varianz"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="Aufhebzeit (Gabel)"/>
+                <TextBox x:Name="MeanThink" Grid.Column="1" Grid.Row="0" Text="100"/>
+                <TextBox x:Name="VarianceThink" Grid.Column="1" Grid.Row="1" Text="200"/>
+                <TextBox x:Name="MeanEat" Grid.Column="1" Grid.Row="2" Text="200"/>
+                <TextBox x:Name="VarianceEat" Grid.Column="1" Grid.Row="3" Text="40"/>
+                <TextBox x:Name="TakeForkTime" Grid.Column="1" Grid.Row="4" Text="40"/>
+            </Grid>
+        </Grid>
+        <Grid Margin="0,215,0,0" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Start" Margin="5" Click="StartGame"/>
+            <Button Grid.Column="1" Content="Stop" Margin="5" Click="EndGame" IsEnabled="False"/>
+        </Grid>
+
+    </Grid>
+</Window>

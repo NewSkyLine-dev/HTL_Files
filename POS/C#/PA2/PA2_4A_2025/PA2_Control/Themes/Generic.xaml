@@ -1,0 +1,34 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:PA2_Control">
+    <Style TargetType="{x:Type local:Countdown}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:Countdown}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <TextBlock Text="Countdown: "/>
+                                <TextBlock Text="{Binding CountdownWert, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </StackPanel>
+
+                            <Grid Height="50" Width="50">
+                                <Image Source="/PA2_Control;component/Uhr_B.png"/>
+                                <Image Source="/PA2_Control;component/Uhr_S.png" RenderTransformOrigin="0.5,0.5">
+                                    <Image.RenderTransform>
+                                        <TransformGroup>
+                                            <RotateTransform x:Name="ImageRotation"/>
+                                        </TransformGroup>
+                                    </Image.RenderTransform>
+                                </Image>
+                            </Grid>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

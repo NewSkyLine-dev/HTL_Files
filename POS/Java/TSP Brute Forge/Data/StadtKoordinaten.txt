@@ -1,0 +1,9 @@
+Wien;4820;1637
+Sankt Pölten;4820;1563
+Salzburg;4780;1303
+Linz;4830;1430
+Klagenfurt;4662;1431
+Innsbruck;4727;1140
+Graz;4707;1545
+Eisenstadt;4785;1652
+Bregenz;4750;977

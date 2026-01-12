@@ -1,0 +1,3005 @@
+{
+  "states": [
+    {
+      "STATE_NAME": "Massachusetts",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Pennsylvania",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Virginia",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Connecticut",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "South Carolina",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Maryland",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "New Jersey",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Georgia",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "New Hampshire",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Delawhare",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "New York",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "North Carolina",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Rhode Island",
+      "ADMIN_ENTERED": null,
+      "YEAR_ENTERED": 1776
+    },
+    {
+      "STATE_NAME": "Vermont",
+      "ADMIN_ENTERED": 1.0,
+      "YEAR_ENTERED": 1791
+    },
+    {
+      "STATE_NAME": "Kentucky",
+      "ADMIN_ENTERED": 1.0,
+      "YEAR_ENTERED": 1792
+    },
+    {
+      "STATE_NAME": "Tennesee",
+      "ADMIN_ENTERED": 2.0,
+      "YEAR_ENTERED": 1796
+    },
+    {
+      "STATE_NAME": "Ohio",
+      "ADMIN_ENTERED": 4.0,
+      "YEAR_ENTERED": 1803
+    },
+    {
+      "STATE_NAME": "Louisiana",
+      "ADMIN_ENTERED": 6.0,
+      "YEAR_ENTERED": 1812
+    },
+    {
+      "STATE_NAME": "Indiana",
+      "ADMIN_ENTERED": 7.0,
+      "YEAR_ENTERED": 1816
+    },
+    {
+      "STATE_NAME": "Mississippi",
+      "ADMIN_ENTERED": 8.0,
+      "YEAR_ENTERED": 1817
+    },
+    {
+      "STATE_NAME": "Illinois",
+      "ADMIN_ENTERED": 8.0,
+      "YEAR_ENTERED": 1818
+    },
+    {
+      "STATE_NAME": "Alabama",
+      "ADMIN_ENTERED": 8.0,
+      "YEAR_ENTERED": 1819
+    },
+    {
+      "STATE_NAME": "Maine",
+      "ADMIN_ENTERED": 8.0,
+      "YEAR_ENTERED": 1820
+    },
+    {
+      "STATE_NAME": "Missouri",
+      "ADMIN_ENTERED": 9.0,
+      "YEAR_ENTERED": 1821
+    },
+    {
+      "STATE_NAME": "Arkansas",
+      "ADMIN_ENTERED": 12.0,
+      "YEAR_ENTERED": 1836
+    },
+    {
+      "STATE_NAME": "Michigan",
+      "ADMIN_ENTERED": 12.0,
+      "YEAR_ENTERED": 1837
+    },
+    {
+      "STATE_NAME": "Florida",
+      "ADMIN_ENTERED": 14.0,
+      "YEAR_ENTERED": 1845
+    },
+    {
+      "STATE_NAME": "Texas",
+      "ADMIN_ENTERED": 15.0,
+      "YEAR_ENTERED": 1845
+    },
+    {
+      "STATE_NAME": "Iowa",
+      "ADMIN_ENTERED": 15.0,
+      "YEAR_ENTERED": 1846
+    },
+    {
+      "STATE_NAME": "Wisconsin",
+      "ADMIN_ENTERED": 15.0,
+      "YEAR_ENTERED": 1848
+    },
+    {
+      "STATE_NAME": "California",
+      "ADMIN_ENTERED": 16.0,
+      "YEAR_ENTERED": 1850
+    },
+    {
+      "STATE_NAME": "Minnesota",
+      "ADMIN_ENTERED": 18.0,
+      "YEAR_ENTERED": 1858
+    },
+    {
+      "STATE_NAME": "Oregon",
+      "ADMIN_ENTERED": 18.0,
+      "YEAR_ENTERED": 1859
+    },
+    {
+      "STATE_NAME": "Kansas",
+      "ADMIN_ENTERED": 18.0,
+      "YEAR_ENTERED": 1861
+    },
+    {
+      "STATE_NAME": "West Virginia",
+      "ADMIN_ENTERED": 19.0,
+      "YEAR_ENTERED": 1863
+    },
+    {
+      "STATE_NAME": "Nevada",
+      "ADMIN_ENTERED": 19.0,
+      "YEAR_ENTERED": 1864
+    },
+    {
+      "STATE_NAME": "Nebraska",
+      "ADMIN_ENTERED": 20.0,
+      "YEAR_ENTERED": 1867
+    },
+    {
+      "STATE_NAME": "Colorado",
+      "ADMIN_ENTERED": 22.0,
+      "YEAR_ENTERED": 1876
+    },
+    {
+      "STATE_NAME": "North Dakota",
+      "ADMIN_ENTERED": 26.0,
+      "YEAR_ENTERED": 1889
+    },
+    {
+      "STATE_NAME": "South Dakota",
+      "ADMIN_ENTERED": 26.0,
+      "YEAR_ENTERED": 1889
+    },
+    {
+      "STATE_NAME": "Montana",
+      "ADMIN_ENTERED": 26.0,
+      "YEAR_ENTERED": 1889
+    },
+    {
+      "STATE_NAME": "Washington",
+      "ADMIN_ENTERED": 26.0,
+      "YEAR_ENTERED": 1889
+    },
+    {
+      "STATE_NAME": "Idaho",
+      "ADMIN_ENTERED": 26.0,
+      "YEAR_ENTERED": 1890
+    },
+    {
+      "STATE_NAME": "Wyoming",
+      "ADMIN_ENTERED": 26.0,
+      "YEAR_ENTERED": 1890
+    },
+    {
+      "STATE_NAME": "Utah",
+      "ADMIN_ENTERED": 27.0,
+      "YEAR_ENTERED": 1896
+    },
+    {
+      "STATE_NAME": "Oklahoma",
+      "ADMIN_ENTERED": 30.0,
+      "YEAR_ENTERED": 1907
+    },
+    {
+      "STATE_NAME": "New Mexico",
+      "ADMIN_ENTERED": 31.0,
+      "YEAR_ENTERED": 1912
+    },
+    {
+      "STATE_NAME": "Arizona",
+      "ADMIN_ENTERED": 31.0,
+      "YEAR_ENTERED": 1912
+    },
+    {
+      "STATE_NAME": "Alaska",
+      "ADMIN_ENTERED": 43.0,
+      "YEAR_ENTERED": 1959
+    },
+    {
+      "STATE_NAME": "Hawaii",
+      "ADMIN_ENTERED": 43.0,
+      "YEAR_ENTERED": 1959
+    }
+  ],
+  "presidents": [
+    {
+      "PRES_NAME": "Washington G",
+      "BIRTH_YEAR": 1732,
+      "YEARS_SERV": 7,
+      "DEATH_AGE": 67.0,
+      "PARTY": "Federalist",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Adams J",
+      "BIRTH_YEAR": 1735,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 90.0,
+      "PARTY": "Federalist",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Jefferson T",
+      "BIRTH_YEAR": 1743,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 83.0,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Madison J",
+      "BIRTH_YEAR": 1751,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 85.0,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Monroe J",
+      "BIRTH_YEAR": 1758,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 73.0,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Adams J Q",
+      "BIRTH_YEAR": 1767,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 80.0,
+      "PARTY": "Demo-Rep",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Jackson A",
+      "BIRTH_YEAR": 1767,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 78.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "South Carolina"
+    },
+    {
+      "PRES_NAME": "Van Buren M",
+      "BIRTH_YEAR": 1782,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 79.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Harrison W H",
+      "BIRTH_YEAR": 1773,
+      "YEARS_SERV": 0,
+      "DEATH_AGE": 68.0,
+      "PARTY": "Whig",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Tyler J",
+      "BIRTH_YEAR": 1790,
+      "YEARS_SERV": 3,
+      "DEATH_AGE": 71.0,
+      "PARTY": "Whig",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Polk J K",
+      "BIRTH_YEAR": 1795,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 53.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "North Carolina"
+    },
+    {
+      "PRES_NAME": "Taylor Z",
+      "BIRTH_YEAR": 1784,
+      "YEARS_SERV": 1,
+      "DEATH_AGE": 65.0,
+      "PARTY": "Whig",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Fillmore M",
+      "BIRTH_YEAR": 1800,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": 74.0,
+      "PARTY": "Whig",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Pierce F",
+      "BIRTH_YEAR": 1804,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 64.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New Hampshire"
+    },
+    {
+      "PRES_NAME": "Buchanan J",
+      "BIRTH_YEAR": 1791,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 77.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Pennsylvania"
+    },
+    {
+      "PRES_NAME": "Lincoln A",
+      "BIRTH_YEAR": 1809,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 56.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Kentucky"
+    },
+    {
+      "PRES_NAME": "Johnson A",
+      "BIRTH_YEAR": 1808,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 66.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "North Carolina"
+    },
+    {
+      "PRES_NAME": "Grant U S",
+      "BIRTH_YEAR": 1822,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 63.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Hayes R B",
+      "BIRTH_YEAR": 1822,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 70.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Garfield J A",
+      "BIRTH_YEAR": 1831,
+      "YEARS_SERV": 0,
+      "DEATH_AGE": 49.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Arthur C A",
+      "BIRTH_YEAR": 1829,
+      "YEARS_SERV": 3,
+      "DEATH_AGE": 57.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Vermont"
+    },
+    {
+      "PRES_NAME": "Cleveland G",
+      "BIRTH_YEAR": 1837,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 71.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New Jersey"
+    },
+    {
+      "PRES_NAME": "Harrison B",
+      "BIRTH_YEAR": 1833,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 67.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "McKinley W",
+      "BIRTH_YEAR": 1843,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 58.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "BIRTH_YEAR": 1858,
+      "YEARS_SERV": 7,
+      "DEATH_AGE": 60.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Taft W H",
+      "BIRTH_YEAR": 1857,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 72.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "BIRTH_YEAR": 1856,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 67.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Virginia"
+    },
+    {
+      "PRES_NAME": "Harding W G",
+      "BIRTH_YEAR": 1865,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": 57.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Ohio"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "BIRTH_YEAR": 1872,
+      "YEARS_SERV": 5,
+      "DEATH_AGE": 60.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Vermont"
+    },
+    {
+      "PRES_NAME": "Hoover H",
+      "BIRTH_YEAR": 1874,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": 90.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Iowa"
+    },
+    {
+      "PRES_NAME": "Roosevelt F D",
+      "BIRTH_YEAR": 1882,
+      "YEARS_SERV": 12,
+      "DEATH_AGE": 63.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Truman H S",
+      "BIRTH_YEAR": 1884,
+      "YEARS_SERV": 7,
+      "DEATH_AGE": 88.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Missouri"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "BIRTH_YEAR": 1890,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 78.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Texas"
+    },
+    {
+      "PRES_NAME": "Kennedy J F",
+      "BIRTH_YEAR": 1917,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": 46.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Johnson L B",
+      "BIRTH_YEAR": 1908,
+      "YEARS_SERV": 5,
+      "DEATH_AGE": 64.0,
+      "PARTY": "Democratic",
+      "STATE_BORN": "California"
+    },
+    {
+      "PRES_NAME": "Nixon R M",
+      "BIRTH_YEAR": 1913,
+      "YEARS_SERV": 5,
+      "DEATH_AGE": 81.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "California"
+    },
+    {
+      "PRES_NAME": "Ford G R",
+      "BIRTH_YEAR": 1913,
+      "YEARS_SERV": 3,
+      "DEATH_AGE": 93.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Nebraska"
+    },
+    {
+      "PRES_NAME": "Carter J E",
+      "BIRTH_YEAR": 1924,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Georgia"
+    },
+    {
+      "PRES_NAME": "Reagan R W",
+      "BIRTH_YEAR": 1911,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": 93.0,
+      "PARTY": "Republican",
+      "STATE_BORN": "Illinois"
+    },
+    {
+      "PRES_NAME": "Bush G H W",
+      "BIRTH_YEAR": 1924,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": null,
+      "PARTY": "Republican",
+      "STATE_BORN": "Massachusetts"
+    },
+    {
+      "PRES_NAME": "Clinton W J",
+      "BIRTH_YEAR": 1946,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Arkansas"
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "BIRTH_YEAR": 1946,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": null,
+      "PARTY": "Republican",
+      "STATE_BORN": "Texas"
+    },
+    {
+      "PRES_NAME": "Obama B H",
+      "BIRTH_YEAR": 1961,
+      "YEARS_SERV": 8,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Hawaii"
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "BIRTH_YEAR": 1946,
+      "YEARS_SERV": 4,
+      "DEATH_AGE": null,
+      "PARTY": "Republican",
+      "STATE_BORN": "New York"
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "BIRTH_YEAR": 1942,
+      "YEARS_SERV": 2,
+      "DEATH_AGE": null,
+      "PARTY": "Democratic",
+      "STATE_BORN": "Pennsylvania"
+    }
+  ],
+  "pres_hobbys": [
+    {
+      "PRES_NAME": "Adams J Q",
+      "HOBBY": "Billards"
+    },
+    {
+      "PRES_NAME": "Adams J Q",
+      "HOBBY": "Swimming"
+    },
+    {
+      "PRES_NAME": "Adams J Q",
+      "HOBBY": "Walking"
+    },
+    {
+      "PRES_NAME": "Arthur C A",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "HOBBY": "Exercise"
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "HOBBY": "Sports"
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "HOBBY": "Reading"
+    },
+    {
+      "PRES_NAME": "Bush G H W",
+      "HOBBY": "Sailing"
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "HOBBY": "Baseball"
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "HOBBY": "War"
+    },
+    {
+      "PRES_NAME": "Cleveland G",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Clinton W J",
+      "HOBBY": "Saxophone"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "HOBBY": "Indian Clubs"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "HOBBY": "Mechanical Horse"
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "HOBBY": "Pitching Hay"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "HOBBY": "Bridge"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "HOBBY": "Hunting"
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "HOBBY": "Painting"
+    },
+    {
+      "PRES_NAME": "Garfield J A",
+      "HOBBY": "Billards"
+    },
+    {
+      "PRES_NAME": "Harding W G",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Harding W G",
+      "HOBBY": "Poker"
+    },
+    {
+      "PRES_NAME": "Harding W G",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Harrison B",
+      "HOBBY": "Hunting"
+    },
+    {
+      "PRES_NAME": "Hayes R B",
+      "HOBBY": "Croquet"
+    },
+    {
+      "PRES_NAME": "Hayes R B",
+      "HOBBY": "Driving"
+    },
+    {
+      "PRES_NAME": "Hayes R B",
+      "HOBBY": "Shooting"
+    },
+    {
+      "PRES_NAME": "Hoover H",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Hoover H",
+      "HOBBY": "Medicine Ball"
+    },
+    {
+      "PRES_NAME": "Jackson A",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Jefferson T",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Jefferson T",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Johnson L B",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Kennedy J F",
+      "HOBBY": "Sailing"
+    },
+    {
+      "PRES_NAME": "Kennedy J F",
+      "HOBBY": "Swimming"
+    },
+    {
+      "PRES_NAME": "Kennedy J F",
+      "HOBBY": "Touch Football"
+    },
+    {
+      "PRES_NAME": "Lincoln A",
+      "HOBBY": "Walking"
+    },
+    {
+      "PRES_NAME": "McKinley W",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "McKinley W",
+      "HOBBY": "Swimming"
+    },
+    {
+      "PRES_NAME": "McKinley W",
+      "HOBBY": "Walking"
+    },
+    {
+      "PRES_NAME": "Nixon R M",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Obama B H",
+      "HOBBY": "Basketball"
+    },
+    {
+      "PRES_NAME": "Obama B H",
+      "HOBBY": "Cooking"
+    },
+    {
+      "PRES_NAME": "Obama B H",
+      "HOBBY": "Poker"
+    },
+    {
+      "PRES_NAME": "Reagan R W",
+      "HOBBY": "SDI"
+    },
+    {
+      "PRES_NAME": "Roosevelt F D",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Roosevelt F D",
+      "HOBBY": "Sailing"
+    },
+    {
+      "PRES_NAME": "Roosevelt F D",
+      "HOBBY": "Swimming"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Boxing"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Hunting"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Jujitsu"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Shooting"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Tennis"
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "HOBBY": "Wrestling"
+    },
+    {
+      "PRES_NAME": "Taft W H",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Taft W H",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Taylor Z",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Truman H S",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Truman H S",
+      "HOBBY": "Poker"
+    },
+    {
+      "PRES_NAME": "Truman H S",
+      "HOBBY": "Walking"
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "HOBBY": "Alternative Facts"
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Van Buren M",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Washington G",
+      "HOBBY": "Fishing"
+    },
+    {
+      "PRES_NAME": "Washington G",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "HOBBY": "Golf"
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "HOBBY": "Riding"
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "HOBBY": "Walking"
+    }
+  ],
+  "administrations": [
+    {
+      "ADMIN_NR": 1,
+      "PRES_NAME": "Washington G",
+      "YEAR_INAUGURATED": 1789
+    },
+    {
+      "ADMIN_NR": 2,
+      "PRES_NAME": "Washington G",
+      "YEAR_INAUGURATED": 1793
+    },
+    {
+      "ADMIN_NR": 3,
+      "PRES_NAME": "Adams J",
+      "YEAR_INAUGURATED": 1797
+    },
+    {
+      "ADMIN_NR": 4,
+      "PRES_NAME": "Jefferson T",
+      "YEAR_INAUGURATED": 1801
+    },
+    {
+      "ADMIN_NR": 5,
+      "PRES_NAME": "Jefferson T",
+      "YEAR_INAUGURATED": 1805
+    },
+    {
+      "ADMIN_NR": 6,
+      "PRES_NAME": "Madison J",
+      "YEAR_INAUGURATED": 1809
+    },
+    {
+      "ADMIN_NR": 7,
+      "PRES_NAME": "Madison J",
+      "YEAR_INAUGURATED": 1813
+    },
+    {
+      "ADMIN_NR": 8,
+      "PRES_NAME": "Monroe J",
+      "YEAR_INAUGURATED": 1817
+    },
+    {
+      "ADMIN_NR": 9,
+      "PRES_NAME": "Monroe J",
+      "YEAR_INAUGURATED": 1821
+    },
+    {
+      "ADMIN_NR": 10,
+      "PRES_NAME": "Adams J Q",
+      "YEAR_INAUGURATED": 1825
+    },
+    {
+      "ADMIN_NR": 11,
+      "PRES_NAME": "Jackson A",
+      "YEAR_INAUGURATED": 1829
+    },
+    {
+      "ADMIN_NR": 12,
+      "PRES_NAME": "Jackson A",
+      "YEAR_INAUGURATED": 1833
+    },
+    {
+      "ADMIN_NR": 13,
+      "PRES_NAME": "Van Buren M",
+      "YEAR_INAUGURATED": 1837
+    },
+    {
+      "ADMIN_NR": 14,
+      "PRES_NAME": "Harrison W H",
+      "YEAR_INAUGURATED": 1841
+    },
+    {
+      "ADMIN_NR": 14,
+      "PRES_NAME": "Tyler J",
+      "YEAR_INAUGURATED": 1841
+    },
+    {
+      "ADMIN_NR": 15,
+      "PRES_NAME": "Polk J K",
+      "YEAR_INAUGURATED": 1845
+    },
+    {
+      "ADMIN_NR": 16,
+      "PRES_NAME": "Taylor Z",
+      "YEAR_INAUGURATED": 1849
+    },
+    {
+      "ADMIN_NR": 16,
+      "PRES_NAME": "Fillmore M",
+      "YEAR_INAUGURATED": 1850
+    },
+    {
+      "ADMIN_NR": 17,
+      "PRES_NAME": "Pierce F",
+      "YEAR_INAUGURATED": 1853
+    },
+    {
+      "ADMIN_NR": 18,
+      "PRES_NAME": "Buchanan J",
+      "YEAR_INAUGURATED": 1857
+    },
+    {
+      "ADMIN_NR": 19,
+      "PRES_NAME": "Lincoln A",
+      "YEAR_INAUGURATED": 1861
+    },
+    {
+      "ADMIN_NR": 20,
+      "PRES_NAME": "Lincoln A",
+      "YEAR_INAUGURATED": 1865
+    },
+    {
+      "ADMIN_NR": 20,
+      "PRES_NAME": "Johnson A",
+      "YEAR_INAUGURATED": 1865
+    },
+    {
+      "ADMIN_NR": 21,
+      "PRES_NAME": "Grant U S",
+      "YEAR_INAUGURATED": 1869
+    },
+    {
+      "ADMIN_NR": 22,
+      "PRES_NAME": "Grant U S",
+      "YEAR_INAUGURATED": 1873
+    },
+    {
+      "ADMIN_NR": 23,
+      "PRES_NAME": "Hayes R B",
+      "YEAR_INAUGURATED": 1877
+    },
+    {
+      "ADMIN_NR": 24,
+      "PRES_NAME": "Garfield J A",
+      "YEAR_INAUGURATED": 1881
+    },
+    {
+      "ADMIN_NR": 24,
+      "PRES_NAME": "Arthur C A",
+      "YEAR_INAUGURATED": 1881
+    },
+    {
+      "ADMIN_NR": 25,
+      "PRES_NAME": "Cleveland G",
+      "YEAR_INAUGURATED": 1885
+    },
+    {
+      "ADMIN_NR": 26,
+      "PRES_NAME": "Harrison B",
+      "YEAR_INAUGURATED": 1889
+    },
+    {
+      "ADMIN_NR": 27,
+      "PRES_NAME": "Cleveland G",
+      "YEAR_INAUGURATED": 1893
+    },
+    {
+      "ADMIN_NR": 28,
+      "PRES_NAME": "McKinley W",
+      "YEAR_INAUGURATED": 1897
+    },
+    {
+      "ADMIN_NR": 29,
+      "PRES_NAME": "McKinley W",
+      "YEAR_INAUGURATED": 1901
+    },
+    {
+      "ADMIN_NR": 29,
+      "PRES_NAME": "Roosevelt T",
+      "YEAR_INAUGURATED": 1901
+    },
+    {
+      "ADMIN_NR": 30,
+      "PRES_NAME": "Roosevelt T",
+      "YEAR_INAUGURATED": 1905
+    },
+    {
+      "ADMIN_NR": 31,
+      "PRES_NAME": "Taft W H",
+      "YEAR_INAUGURATED": 1909
+    },
+    {
+      "ADMIN_NR": 32,
+      "PRES_NAME": "Wilson W",
+      "YEAR_INAUGURATED": 1913
+    },
+    {
+      "ADMIN_NR": 33,
+      "PRES_NAME": "Wilson W",
+      "YEAR_INAUGURATED": 1917
+    },
+    {
+      "ADMIN_NR": 34,
+      "PRES_NAME": "Harding W G",
+      "YEAR_INAUGURATED": 1921
+    },
+    {
+      "ADMIN_NR": 34,
+      "PRES_NAME": "Coolidge C",
+      "YEAR_INAUGURATED": 1923
+    },
+    {
+      "ADMIN_NR": 35,
+      "PRES_NAME": "Coolidge C",
+      "YEAR_INAUGURATED": 1925
+    },
+    {
+      "ADMIN_NR": 36,
+      "PRES_NAME": "Hoover H",
+      "YEAR_INAUGURATED": 1929
+    },
+    {
+      "ADMIN_NR": 37,
+      "PRES_NAME": "Roosevelt F D",
+      "YEAR_INAUGURATED": 1933
+    },
+    {
+      "ADMIN_NR": 38,
+      "PRES_NAME": "Roosevelt F D",
+      "YEAR_INAUGURATED": 1937
+    },
+    {
+      "ADMIN_NR": 39,
+      "PRES_NAME": "Roosevelt F D",
+      "YEAR_INAUGURATED": 1941
+    },
+    {
+      "ADMIN_NR": 40,
+      "PRES_NAME": "Roosevelt F D",
+      "YEAR_INAUGURATED": 1945
+    },
+    {
+      "ADMIN_NR": 40,
+      "PRES_NAME": "Truman H S",
+      "YEAR_INAUGURATED": 1945
+    },
+    {
+      "ADMIN_NR": 41,
+      "PRES_NAME": "Truman H S",
+      "YEAR_INAUGURATED": 1949
+    },
+    {
+      "ADMIN_NR": 42,
+      "PRES_NAME": "Eisenhower D D",
+      "YEAR_INAUGURATED": 1953
+    },
+    {
+      "ADMIN_NR": 43,
+      "PRES_NAME": "Eisenhower D D",
+      "YEAR_INAUGURATED": 1957
+    },
+    {
+      "ADMIN_NR": 44,
+      "PRES_NAME": "Kennedy J F",
+      "YEAR_INAUGURATED": 1961
+    },
+    {
+      "ADMIN_NR": 44,
+      "PRES_NAME": "Johnson L B",
+      "YEAR_INAUGURATED": 1963
+    },
+    {
+      "ADMIN_NR": 45,
+      "PRES_NAME": "Johnson L B",
+      "YEAR_INAUGURATED": 1965
+    },
+    {
+      "ADMIN_NR": 46,
+      "PRES_NAME": "Nixon R M",
+      "YEAR_INAUGURATED": 1969
+    },
+    {
+      "ADMIN_NR": 47,
+      "PRES_NAME": "Nixon R M",
+      "YEAR_INAUGURATED": 1973
+    },
+    {
+      "ADMIN_NR": 47,
+      "PRES_NAME": "Ford G R",
+      "YEAR_INAUGURATED": 1974
+    },
+    {
+      "ADMIN_NR": 48,
+      "PRES_NAME": "Carter J E",
+      "YEAR_INAUGURATED": 1977
+    },
+    {
+      "ADMIN_NR": 49,
+      "PRES_NAME": "Reagan R W",
+      "YEAR_INAUGURATED": 1981
+    },
+    {
+      "ADMIN_NR": 50,
+      "PRES_NAME": "Reagan R W",
+      "YEAR_INAUGURATED": 1985
+    },
+    {
+      "ADMIN_NR": 51,
+      "PRES_NAME": "Bush G H W",
+      "YEAR_INAUGURATED": 1989
+    },
+    {
+      "ADMIN_NR": 52,
+      "PRES_NAME": "Clinton W J",
+      "YEAR_INAUGURATED": 1993
+    },
+    {
+      "ADMIN_NR": 53,
+      "PRES_NAME": "Clinton W J",
+      "YEAR_INAUGURATED": 1997
+    },
+    {
+      "ADMIN_NR": 54,
+      "PRES_NAME": "Bush G W",
+      "YEAR_INAUGURATED": 2001
+    },
+    {
+      "ADMIN_NR": 55,
+      "PRES_NAME": "Bush G W",
+      "YEAR_INAUGURATED": 2005
+    },
+    {
+      "ADMIN_NR": 56,
+      "PRES_NAME": "Obama B H",
+      "YEAR_INAUGURATED": 2009
+    },
+    {
+      "ADMIN_NR": 57,
+      "PRES_NAME": "Obama B H",
+      "YEAR_INAUGURATED": 2013
+    },
+    {
+      "ADMIN_NR": 58,
+      "PRES_NAME": "Trump D J",
+      "YEAR_INAUGURATED": 2017
+    },
+    {
+      "ADMIN_NR": 59,
+      "PRES_NAME": "Biden J",
+      "YEAR_INAUGURATED": 2021
+    }
+  ],
+  "admin_pr_vps": [
+    {
+      "ADMIN_NR": 1,
+      "PRES_NAME": "Washington G",
+      "VICE_PRES_NAME": "Adams J"
+    },
+    {
+      "ADMIN_NR": 2,
+      "PRES_NAME": "Washington G",
+      "VICE_PRES_NAME": "Adams J"
+    },
+    {
+      "ADMIN_NR": 3,
+      "PRES_NAME": "Adams J",
+      "VICE_PRES_NAME": "Jefferson T"
+    },
+    {
+      "ADMIN_NR": 4,
+      "PRES_NAME": "Jefferson T",
+      "VICE_PRES_NAME": "Burr A"
+    },
+    {
+      "ADMIN_NR": 5,
+      "PRES_NAME": "Jefferson T",
+      "VICE_PRES_NAME": "Clinton G"
+    },
+    {
+      "ADMIN_NR": 6,
+      "PRES_NAME": "Madison J",
+      "VICE_PRES_NAME": "Clinton G"
+    },
+    {
+      "ADMIN_NR": 7,
+      "PRES_NAME": "Madison J",
+      "VICE_PRES_NAME": "Gerry E"
+    },
+    {
+      "ADMIN_NR": 8,
+      "PRES_NAME": "Monroe J",
+      "VICE_PRES_NAME": "Tompkins D"
+    },
+    {
+      "ADMIN_NR": 9,
+      "PRES_NAME": "Monroe J",
+      "VICE_PRES_NAME": "Tompkins D"
+    },
+    {
+      "ADMIN_NR": 10,
+      "PRES_NAME": "Adams J Q",
+      "VICE_PRES_NAME": "Calhoun J"
+    },
+    {
+      "ADMIN_NR": 11,
+      "PRES_NAME": "Jackson A",
+      "VICE_PRES_NAME": "Calhoun J"
+    },
+    {
+      "ADMIN_NR": 12,
+      "PRES_NAME": "Jackson A",
+      "VICE_PRES_NAME": "Van Buren M"
+    },
+    {
+      "ADMIN_NR": 13,
+      "PRES_NAME": "Van Buren M",
+      "VICE_PRES_NAME": "Johnson R M"
+    },
+    {
+      "ADMIN_NR": 14,
+      "PRES_NAME": "Harrison W H",
+      "VICE_PRES_NAME": "Tyler J"
+    },
+    {
+      "ADMIN_NR": 15,
+      "PRES_NAME": "Polk J K",
+      "VICE_PRES_NAME": "Dallas G M"
+    },
+    {
+      "ADMIN_NR": 16,
+      "PRES_NAME": "Taylor Z",
+      "VICE_PRES_NAME": "Fillmore M"
+    },
+    {
+      "ADMIN_NR": 17,
+      "PRES_NAME": "Pierce F",
+      "VICE_PRES_NAME": "De Vane King W R"
+    },
+    {
+      "ADMIN_NR": 18,
+      "PRES_NAME": "Buchanan J",
+      "VICE_PRES_NAME": "Breckinridge J C"
+    },
+    {
+      "ADMIN_NR": 19,
+      "PRES_NAME": "Lincoln A",
+      "VICE_PRES_NAME": "Hamlin H"
+    },
+    {
+      "ADMIN_NR": 20,
+      "PRES_NAME": "Lincoln A",
+      "VICE_PRES_NAME": "Johnson A"
+    },
+    {
+      "ADMIN_NR": 21,
+      "PRES_NAME": "Grant U S",
+      "VICE_PRES_NAME": "Colfax S"
+    },
+    {
+      "ADMIN_NR": 22,
+      "PRES_NAME": "Grant U S",
+      "VICE_PRES_NAME": "Wilson H"
+    },
+    {
+      "ADMIN_NR": 23,
+      "PRES_NAME": "Hayes R B",
+      "VICE_PRES_NAME": "Wheeler W"
+    },
+    {
+      "ADMIN_NR": 24,
+      "PRES_NAME": "Garfield J A",
+      "VICE_PRES_NAME": "Arthur C A"
+    },
+    {
+      "ADMIN_NR": 25,
+      "PRES_NAME": "Cleveland G",
+      "VICE_PRES_NAME": "Hendricks T A"
+    },
+    {
+      "ADMIN_NR": 26,
+      "PRES_NAME": "Harrison B",
+      "VICE_PRES_NAME": "Morton L P"
+    },
+    {
+      "ADMIN_NR": 27,
+      "PRES_NAME": "Cleveland G",
+      "VICE_PRES_NAME": "Stevenson A E"
+    },
+    {
+      "ADMIN_NR": 28,
+      "PRES_NAME": "McKinley W",
+      "VICE_PRES_NAME": "Hobart G A"
+    },
+    {
+      "ADMIN_NR": 29,
+      "PRES_NAME": "McKinley W",
+      "VICE_PRES_NAME": "Roosevelt T"
+    },
+    {
+      "ADMIN_NR": 30,
+      "PRES_NAME": "Roosevelt T",
+      "VICE_PRES_NAME": "Fairbanks C W"
+    },
+    {
+      "ADMIN_NR": 31,
+      "PRES_NAME": "Taft W H",
+      "VICE_PRES_NAME": "Sherman J S"
+    },
+    {
+      "ADMIN_NR": 32,
+      "PRES_NAME": "Wilson W",
+      "VICE_PRES_NAME": "Marshall T R"
+    },
+    {
+      "ADMIN_NR": 33,
+      "PRES_NAME": "Wilson W",
+      "VICE_PRES_NAME": "Marshall T R"
+    },
+    {
+      "ADMIN_NR": 34,
+      "PRES_NAME": "Harding W G",
+      "VICE_PRES_NAME": "Coolidge C"
+    },
+    {
+      "ADMIN_NR": 35,
+      "PRES_NAME": "Coolidge C",
+      "VICE_PRES_NAME": "Dawes C G"
+    },
+    {
+      "ADMIN_NR": 36,
+      "PRES_NAME": "Hoover H",
+      "VICE_PRES_NAME": "Curtis C"
+    },
+    {
+      "ADMIN_NR": 37,
+      "PRES_NAME": "Roosevelt F D",
+      "VICE_PRES_NAME": "Garner J N"
+    },
+    {
+      "ADMIN_NR": 38,
+      "PRES_NAME": "Roosevelt F D",
+      "VICE_PRES_NAME": "Garner J N"
+    },
+    {
+      "ADMIN_NR": 39,
+      "PRES_NAME": "Roosevelt F D",
+      "VICE_PRES_NAME": "Wallace H A"
+    },
+    {
+      "ADMIN_NR": 40,
+      "PRES_NAME": "Roosevelt F D",
+      "VICE_PRES_NAME": "Truman H S"
+    },
+    {
+      "ADMIN_NR": 41,
+      "PRES_NAME": "Truman H S",
+      "VICE_PRES_NAME": "Barkley A W"
+    },
+    {
+      "ADMIN_NR": 42,
+      "PRES_NAME": "Eisenhower D D",
+      "VICE_PRES_NAME": "Nixon R M"
+    },
+    {
+      "ADMIN_NR": 43,
+      "PRES_NAME": "Eisenhower D D",
+      "VICE_PRES_NAME": "Nixon R M"
+    },
+    {
+      "ADMIN_NR": 44,
+      "PRES_NAME": "Kennedy J F",
+      "VICE_PRES_NAME": "Johnson L B"
+    },
+    {
+      "ADMIN_NR": 45,
+      "PRES_NAME": "Johnson L B",
+      "VICE_PRES_NAME": "Humphrey H H"
+    },
+    {
+      "ADMIN_NR": 46,
+      "PRES_NAME": "Nixon R M",
+      "VICE_PRES_NAME": "Agnew S T"
+    },
+    {
+      "ADMIN_NR": 47,
+      "PRES_NAME": "Ford G R",
+      "VICE_PRES_NAME": "Rockefeller N A"
+    },
+    {
+      "ADMIN_NR": 47,
+      "PRES_NAME": "Nixon R M",
+      "VICE_PRES_NAME": "Agnew S T"
+    },
+    {
+      "ADMIN_NR": 47,
+      "PRES_NAME": "Nixon R M",
+      "VICE_PRES_NAME": "Ford G R"
+    },
+    {
+      "ADMIN_NR": 48,
+      "PRES_NAME": "Carter J E",
+      "VICE_PRES_NAME": "Mondale W F"
+    },
+    {
+      "ADMIN_NR": 49,
+      "PRES_NAME": "Reagan R W",
+      "VICE_PRES_NAME": "Bush G H W"
+    },
+    {
+      "ADMIN_NR": 50,
+      "PRES_NAME": "Reagan R W",
+      "VICE_PRES_NAME": "Bush G H W"
+    },
+    {
+      "ADMIN_NR": 51,
+      "PRES_NAME": "Bush G H W",
+      "VICE_PRES_NAME": "Quayle D"
+    },
+    {
+      "ADMIN_NR": 52,
+      "PRES_NAME": "Clinton W J",
+      "VICE_PRES_NAME": "Gore A"
+    },
+    {
+      "ADMIN_NR": 53,
+      "PRES_NAME": "Clinton W J",
+      "VICE_PRES_NAME": "Gore A"
+    },
+    {
+      "ADMIN_NR": 54,
+      "PRES_NAME": "Bush G W",
+      "VICE_PRES_NAME": "Cheney D"
+    },
+    {
+      "ADMIN_NR": 55,
+      "PRES_NAME": "Bush G W",
+      "VICE_PRES_NAME": "Cheney D"
+    },
+    {
+      "ADMIN_NR": 56,
+      "PRES_NAME": "Obama B H",
+      "VICE_PRES_NAME": "Biden J"
+    },
+    {
+      "ADMIN_NR": 57,
+      "PRES_NAME": "Obama B H",
+      "VICE_PRES_NAME": "Biden J"
+    },
+    {
+      "ADMIN_NR": 58,
+      "PRES_NAME": "Trump D J",
+      "VICE_PRES_NAME": "Pence M R"
+    },
+    {
+      "ADMIN_NR": 59,
+      "PRES_NAME": "Biden J",
+      "VICE_PRES_NAME": "Harris K"
+    }
+  ],
+  "pres_marriages": [
+    {
+      "PRES_NAME": "Washington G",
+      "SPOUSE_NAME": "Custis M D",
+      "PR_AGE": 26,
+      "SP_AGE": 27,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1759
+    },
+    {
+      "PRES_NAME": "Adams J",
+      "SPOUSE_NAME": "Simth A",
+      "PR_AGE": 28,
+      "SP_AGE": 19,
+      "NR_CHILDREN": 5,
+      "MAR_YEAR": 1764
+    },
+    {
+      "PRES_NAME": "Jefferson T",
+      "SPOUSE_NAME": "Skelton M W",
+      "PR_AGE": 28,
+      "SP_AGE": 23,
+      "NR_CHILDREN": 6,
+      "MAR_YEAR": 1772
+    },
+    {
+      "PRES_NAME": "Madison J",
+      "SPOUSE_NAME": "Todd D D P",
+      "PR_AGE": 43,
+      "SP_AGE": 26,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1794
+    },
+    {
+      "PRES_NAME": "Monroe J",
+      "SPOUSE_NAME": "Kortright E",
+      "PR_AGE": 27,
+      "SP_AGE": 17,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1786
+    },
+    {
+      "PRES_NAME": "Adams J Q",
+      "SPOUSE_NAME": "Johnson L C",
+      "PR_AGE": 30,
+      "SP_AGE": 22,
+      "NR_CHILDREN": 4,
+      "MAR_YEAR": 1797
+    },
+    {
+      "PRES_NAME": "Jackson A",
+      "SPOUSE_NAME": "Robards R D",
+      "PR_AGE": 26,
+      "SP_AGE": 26,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1794
+    },
+    {
+      "PRES_NAME": "Van Buren M",
+      "SPOUSE_NAME": "Hoes H",
+      "PR_AGE": 24,
+      "SP_AGE": 23,
+      "NR_CHILDREN": 4,
+      "MAR_YEAR": 1807
+    },
+    {
+      "PRES_NAME": "Harrison W H",
+      "SPOUSE_NAME": "Symmos A T",
+      "PR_AGE": 22,
+      "SP_AGE": 20,
+      "NR_CHILDREN": 10,
+      "MAR_YEAR": 1795
+    },
+    {
+      "PRES_NAME": "Tyler J",
+      "SPOUSE_NAME": "Christian L",
+      "PR_AGE": 23,
+      "SP_AGE": 22,
+      "NR_CHILDREN": 8,
+      "MAR_YEAR": 1813
+    },
+    {
+      "PRES_NAME": "Tyler J",
+      "SPOUSE_NAME": "Gardiner J",
+      "PR_AGE": 54,
+      "SP_AGE": 24,
+      "NR_CHILDREN": 7,
+      "MAR_YEAR": 1844
+    },
+    {
+      "PRES_NAME": "Polk J K",
+      "SPOUSE_NAME": "Chidross S",
+      "PR_AGE": 28,
+      "SP_AGE": 20,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1824
+    },
+    {
+      "PRES_NAME": "Taylor Z",
+      "SPOUSE_NAME": "Smith M M",
+      "PR_AGE": 25,
+      "SP_AGE": 21,
+      "NR_CHILDREN": 6,
+      "MAR_YEAR": 1810
+    },
+    {
+      "PRES_NAME": "Fillmore M",
+      "SPOUSE_NAME": "Powers A",
+      "PR_AGE": 26,
+      "SP_AGE": 27,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1826
+    },
+    {
+      "PRES_NAME": "Fillmore M",
+      "SPOUSE_NAME": "McIntosh C C",
+      "PR_AGE": 58,
+      "SP_AGE": 44,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1858
+    },
+    {
+      "PRES_NAME": "Pierce F",
+      "SPOUSE_NAME": "Appleton J M",
+      "PR_AGE": 29,
+      "SP_AGE": 28,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1834
+    },
+    {
+      "PRES_NAME": "Lincoln A",
+      "SPOUSE_NAME": "Todd M",
+      "PR_AGE": 33,
+      "SP_AGE": 23,
+      "NR_CHILDREN": 4,
+      "MAR_YEAR": 1842
+    },
+    {
+      "PRES_NAME": "Johnson A",
+      "SPOUSE_NAME": "McCardle E",
+      "PR_AGE": 18,
+      "SP_AGE": 16,
+      "NR_CHILDREN": 5,
+      "MAR_YEAR": 1827
+    },
+    {
+      "PRES_NAME": "Grant U S",
+      "SPOUSE_NAME": "Dent J B",
+      "PR_AGE": 26,
+      "SP_AGE": 22,
+      "NR_CHILDREN": 4,
+      "MAR_YEAR": 1848
+    },
+    {
+      "PRES_NAME": "Hayes R B",
+      "SPOUSE_NAME": "Webb L W",
+      "PR_AGE": 30,
+      "SP_AGE": 21,
+      "NR_CHILDREN": 8,
+      "MAR_YEAR": 1852
+    },
+    {
+      "PRES_NAME": "Garfield J A",
+      "SPOUSE_NAME": "Rudolph L",
+      "PR_AGE": 26,
+      "SP_AGE": 26,
+      "NR_CHILDREN": 7,
+      "MAR_YEAR": 1853
+    },
+    {
+      "PRES_NAME": "Arthur C A",
+      "SPOUSE_NAME": "Horndon E L",
+      "PR_AGE": 29,
+      "SP_AGE": 22,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1859
+    },
+    {
+      "PRES_NAME": "Cleveland G",
+      "SPOUSE_NAME": "Folson F",
+      "PR_AGE": 49,
+      "SP_AGE": 21,
+      "NR_CHILDREN": 5,
+      "MAR_YEAR": 1886
+    },
+    {
+      "PRES_NAME": "Harrison B",
+      "SPOUSE_NAME": "Scott C L",
+      "PR_AGE": 20,
+      "SP_AGE": 21,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1853
+    },
+    {
+      "PRES_NAME": "Harrison B",
+      "SPOUSE_NAME": "Dimmick M S L",
+      "PR_AGE": 62,
+      "SP_AGE": 37,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 1896
+    },
+    {
+      "PRES_NAME": "McKinley W",
+      "SPOUSE_NAME": "Saxton I",
+      "PR_AGE": 27,
+      "SP_AGE": 23,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1871
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "SPOUSE_NAME": "Lee A H",
+      "PR_AGE": 22,
+      "SP_AGE": 19,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 1880
+    },
+    {
+      "PRES_NAME": "Roosevelt T",
+      "SPOUSE_NAME": "Carow E K",
+      "PR_AGE": 28,
+      "SP_AGE": 25,
+      "NR_CHILDREN": 5,
+      "MAR_YEAR": 1886
+    },
+    {
+      "PRES_NAME": "Taft W H",
+      "SPOUSE_NAME": "Horron H",
+      "PR_AGE": 28,
+      "SP_AGE": 25,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1886
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "SPOUSE_NAME": "Axson E L",
+      "PR_AGE": 28,
+      "SP_AGE": 25,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1885
+    },
+    {
+      "PRES_NAME": "Wilson W",
+      "SPOUSE_NAME": "Galt E B",
+      "PR_AGE": 58,
+      "SP_AGE": 43,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1915
+    },
+    {
+      "PRES_NAME": "Harding W G",
+      "SPOUSE_NAME": "DeWolfe F K",
+      "PR_AGE": 25,
+      "SP_AGE": 30,
+      "NR_CHILDREN": 0,
+      "MAR_YEAR": 1891
+    },
+    {
+      "PRES_NAME": "Coolidge C",
+      "SPOUSE_NAME": "Goodhue G A",
+      "PR_AGE": 33,
+      "SP_AGE": 26,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1905
+    },
+    {
+      "PRES_NAME": "Hoover H",
+      "SPOUSE_NAME": "Henry L",
+      "PR_AGE": 24,
+      "SP_AGE": 23,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1899
+    },
+    {
+      "PRES_NAME": "Roosevelt F D",
+      "SPOUSE_NAME": "Roosevelt A E",
+      "PR_AGE": 23,
+      "SP_AGE": 20,
+      "NR_CHILDREN": 6,
+      "MAR_YEAR": 1905
+    },
+    {
+      "PRES_NAME": "Truman H S",
+      "SPOUSE_NAME": "Wallace E V",
+      "PR_AGE": 35,
+      "SP_AGE": 34,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 1918
+    },
+    {
+      "PRES_NAME": "Eisenhower D D",
+      "SPOUSE_NAME": "Doud G",
+      "PR_AGE": 25,
+      "SP_AGE": 19,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1916
+    },
+    {
+      "PRES_NAME": "Kennedy J F",
+      "SPOUSE_NAME": "Bouvier J L",
+      "PR_AGE": 36,
+      "SP_AGE": 24,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1953
+    },
+    {
+      "PRES_NAME": "Johnson L B",
+      "SPOUSE_NAME": "Taylor C A",
+      "PR_AGE": 26,
+      "SP_AGE": 21,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1934
+    },
+    {
+      "PRES_NAME": "Nixon R M",
+      "SPOUSE_NAME": "Ryan T C",
+      "PR_AGE": 27,
+      "SP_AGE": 28,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1940
+    },
+    {
+      "PRES_NAME": "Ford G R",
+      "SPOUSE_NAME": "Warren E B",
+      "PR_AGE": 35,
+      "SP_AGE": 30,
+      "NR_CHILDREN": 4,
+      "MAR_YEAR": 1948
+    },
+    {
+      "PRES_NAME": "Carter J E",
+      "SPOUSE_NAME": "Smith R",
+      "PR_AGE": 21,
+      "SP_AGE": 18,
+      "NR_CHILDREN": 4,
+      "MAR_YEAR": 1946
+    },
+    {
+      "PRES_NAME": "Reagan R W",
+      "SPOUSE_NAME": "Wyman J",
+      "PR_AGE": 28,
+      "SP_AGE": 25,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1940
+    },
+    {
+      "PRES_NAME": "Reagan R W",
+      "SPOUSE_NAME": "Davis N",
+      "PR_AGE": 41,
+      "SP_AGE": 28,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1952
+    },
+    {
+      "PRES_NAME": "Bush G H W",
+      "SPOUSE_NAME": "Pierce B",
+      "PR_AGE": 20,
+      "SP_AGE": 19,
+      "NR_CHILDREN": 5,
+      "MAR_YEAR": 1945
+    },
+    {
+      "PRES_NAME": "Clinton W J",
+      "SPOUSE_NAME": "Rodham H D",
+      "PR_AGE": 29,
+      "SP_AGE": 28,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 1975
+    },
+    {
+      "PRES_NAME": "Bush G W",
+      "SPOUSE_NAME": "Welch L",
+      "PR_AGE": 31,
+      "SP_AGE": 30,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1977
+    },
+    {
+      "PRES_NAME": "Obama B H",
+      "SPOUSE_NAME": "Robinson M L",
+      "PR_AGE": 31,
+      "SP_AGE": 28,
+      "NR_CHILDREN": 2,
+      "MAR_YEAR": 1992
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "SPOUSE_NAME": "Zelnickova I M",
+      "PR_AGE": 31,
+      "SP_AGE": 28,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1977
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "SPOUSE_NAME": "Maples M A",
+      "PR_AGE": 47,
+      "SP_AGE": 23,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 1993
+    },
+    {
+      "PRES_NAME": "Trump D J",
+      "SPOUSE_NAME": "Knauss M",
+      "PR_AGE": 59,
+      "SP_AGE": 35,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 2005
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "SPOUSE_NAME": "Hunter N",
+      "PR_AGE": 23,
+      "SP_AGE": 24,
+      "NR_CHILDREN": 3,
+      "MAR_YEAR": 1966
+    },
+    {
+      "PRES_NAME": "Biden J",
+      "SPOUSE_NAME": "Jacobs J T",
+      "PR_AGE": 34,
+      "SP_AGE": 26,
+      "NR_CHILDREN": 1,
+      "MAR_YEAR": 1977
+    }
+  ],
+  "elections": [
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Washington G",
+      "VOTES": 69,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Adams J",
+      "VOTES": 34,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Jay J",
+      "VOTES": 9,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Harrison R H",
+      "VOTES": 6,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Rutledge J",
+      "VOTES": 6,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Hancock J",
+      "VOTES": 4,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Clinton G",
+      "VOTES": 3,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Huntington S",
+      "VOTES": 2,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Milton J",
+      "VOTES": 2,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Armstrong J",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Lincoln B",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1789,
+      "CANDIDATE": "Telfair E",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1792,
+      "CANDIDATE": "Washington G",
+      "VOTES": 132,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1792,
+      "CANDIDATE": "Adams J",
+      "VOTES": 77,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1792,
+      "CANDIDATE": "Clinton G",
+      "VOTES": 50,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1792,
+      "CANDIDATE": "Jefferson T",
+      "VOTES": 4,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1792,
+      "CANDIDATE": "Burr A",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Adams J",
+      "VOTES": 71,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Jefferson T",
+      "VOTES": 68,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Pinckney T",
+      "VOTES": 59,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Burr A",
+      "VOTES": 30,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Adams S",
+      "VOTES": 15,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Ellsworth O",
+      "VOTES": 11,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Clinton G",
+      "VOTES": 7,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Jay J",
+      "VOTES": 5,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Iredell J",
+      "VOTES": 3,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Henry J",
+      "VOTES": 2,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Johnson S",
+      "VOTES": 2,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Washington G",
+      "VOTES": 2,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1796,
+      "CANDIDATE": "Pinckney C C",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1800,
+      "CANDIDATE": "Jefferson T",
+      "VOTES": 73,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1800,
+      "CANDIDATE": "Burr A",
+      "VOTES": 73,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1800,
+      "CANDIDATE": "Adams J",
+      "VOTES": 65,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1800,
+      "CANDIDATE": "Pickney C C",
+      "VOTES": 64,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1800,
+      "CANDIDATE": "Jay J",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1804,
+      "CANDIDATE": "Jefferson T",
+      "VOTES": 162,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1804,
+      "CANDIDATE": "Pinckney C C",
+      "VOTES": 14,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1808,
+      "CANDIDATE": "Madison J",
+      "VOTES": 122,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1808,
+      "CANDIDATE": "Pinckney C C",
+      "VOTES": 47,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1808,
+      "CANDIDATE": "Clinton G",
+      "VOTES": 6,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1812,
+      "CANDIDATE": "Madison J",
+      "VOTES": 128,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1812,
+      "CANDIDATE": "Clinton D W",
+      "VOTES": 89,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1816,
+      "CANDIDATE": "Monroe J",
+      "VOTES": 183,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1816,
+      "CANDIDATE": "King R",
+      "VOTES": 34,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1820,
+      "CANDIDATE": "Monroe J",
+      "VOTES": 231,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1820,
+      "CANDIDATE": "Adams J Q",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1824,
+      "CANDIDATE": "Jackson A",
+      "VOTES": 99,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1824,
+      "CANDIDATE": "Adams J Q",
+      "VOTES": 84,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1824,
+      "CANDIDATE": "Crawford W H",
+      "VOTES": 41,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1824,
+      "CANDIDATE": "Clay H",
+      "VOTES": 37,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1828,
+      "CANDIDATE": "Jackson A",
+      "VOTES": 178,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1828,
+      "CANDIDATE": "Adams J Q",
+      "VOTES": 83,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1832,
+      "CANDIDATE": "Jackson A",
+      "VOTES": 219,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1832,
+      "CANDIDATE": "Clay H",
+      "VOTES": 49,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1832,
+      "CANDIDATE": "Floyd J",
+      "VOTES": 11,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1832,
+      "CANDIDATE": "Wirt W",
+      "VOTES": 7,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1836,
+      "CANDIDATE": "Van Buren M",
+      "VOTES": 170,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1836,
+      "CANDIDATE": "Harrison W H",
+      "VOTES": 73,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1836,
+      "CANDIDATE": "White H L",
+      "VOTES": 26,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1836,
+      "CANDIDATE": "Webster D",
+      "VOTES": 14,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1836,
+      "CANDIDATE": "Mangum",
+      "VOTES": 11,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1840,
+      "CANDIDATE": "Harrison W H",
+      "VOTES": 234,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1840,
+      "CANDIDATE": "Van Buren M",
+      "VOTES": 60,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1844,
+      "CANDIDATE": "Polk J K",
+      "VOTES": 170,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1844,
+      "CANDIDATE": "Clay H",
+      "VOTES": 105,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1848,
+      "CANDIDATE": "Taylor Z",
+      "VOTES": 163,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1848,
+      "CANDIDATE": "Cass L",
+      "VOTES": 127,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1852,
+      "CANDIDATE": "Pierce F",
+      "VOTES": 254,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1852,
+      "CANDIDATE": "Scott W",
+      "VOTES": 42,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1856,
+      "CANDIDATE": "Buchanan J",
+      "VOTES": 174,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1856,
+      "CANDIDATE": "Fremont J C",
+      "VOTES": 114,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1856,
+      "CANDIDATE": "Fillmore M",
+      "VOTES": 8,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1860,
+      "CANDIDATE": "Lincoln A",
+      "VOTES": 180,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1860,
+      "CANDIDATE": "Breckinridge J C",
+      "VOTES": 72,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1860,
+      "CANDIDATE": "Bell J",
+      "VOTES": 39,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1860,
+      "CANDIDATE": "Douglas S A",
+      "VOTES": 12,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1864,
+      "CANDIDATE": "Lincoln A",
+      "VOTES": 212,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1864,
+      "CANDIDATE": "McClellan G B",
+      "VOTES": 21,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1868,
+      "CANDIDATE": "Grant U S",
+      "VOTES": 214,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1868,
+      "CANDIDATE": "Seymour H",
+      "VOTES": 80,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1872,
+      "CANDIDATE": "Grant U S",
+      "VOTES": 286,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1872,
+      "CANDIDATE": "Hendricks T A",
+      "VOTES": 42,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1872,
+      "CANDIDATE": "Brown B G",
+      "VOTES": 18,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1872,
+      "CANDIDATE": "Jenkins C J",
+      "VOTES": 2,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1872,
+      "CANDIDATE": "Davids D",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1876,
+      "CANDIDATE": "Hayes R B",
+      "VOTES": 185,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1876,
+      "CANDIDATE": "Tilden S J",
+      "VOTES": 184,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1880,
+      "CANDIDATE": "Garfield J A",
+      "VOTES": 214,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1880,
+      "CANDIDATE": "Hancock W S",
+      "VOTES": 155,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1884,
+      "CANDIDATE": "Cleveland G",
+      "VOTES": 219,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1884,
+      "CANDIDATE": "Blaine J G",
+      "VOTES": 182,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1888,
+      "CANDIDATE": "Harrison B",
+      "VOTES": 233,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1888,
+      "CANDIDATE": "Cleveland G",
+      "VOTES": 168,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1892,
+      "CANDIDATE": "Cleveland G",
+      "VOTES": 277,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1892,
+      "CANDIDATE": "Harrison B",
+      "VOTES": 145,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1892,
+      "CANDIDATE": "Weaver J B",
+      "VOTES": 22,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1896,
+      "CANDIDATE": "McKinley W",
+      "VOTES": 271,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1896,
+      "CANDIDATE": "Bryan W J",
+      "VOTES": 176,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1900,
+      "CANDIDATE": "McKinley W",
+      "VOTES": 292,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1900,
+      "CANDIDATE": "Bryan W J",
+      "VOTES": 155,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1904,
+      "CANDIDATE": "Roosevelt T",
+      "VOTES": 336,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1904,
+      "CANDIDATE": "Parker A B",
+      "VOTES": 140,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1908,
+      "CANDIDATE": "Taft W H",
+      "VOTES": 321,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1908,
+      "CANDIDATE": "Bryan W J",
+      "VOTES": 162,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1912,
+      "CANDIDATE": "Wilson W",
+      "VOTES": 435,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1912,
+      "CANDIDATE": "Roosevelt T",
+      "VOTES": 88,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1912,
+      "CANDIDATE": "Taft W H",
+      "VOTES": 8,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1916,
+      "CANDIDATE": "Wilson W",
+      "VOTES": 277,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1916,
+      "CANDIDATE": "Hughes C E",
+      "VOTES": 254,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1920,
+      "CANDIDATE": "Harding W G",
+      "VOTES": 404,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1920,
+      "CANDIDATE": "Cox J A",
+      "VOTES": 127,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1924,
+      "CANDIDATE": "Coolidge C",
+      "VOTES": 382,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1924,
+      "CANDIDATE": "Davis J W",
+      "VOTES": 136,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1924,
+      "CANDIDATE": "La Follette R M",
+      "VOTES": 13,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1928,
+      "CANDIDATE": "Hoover H",
+      "VOTES": 444,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1928,
+      "CANDIDATE": "Smith A E",
+      "VOTES": 87,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1932,
+      "CANDIDATE": "Roosevelt F D",
+      "VOTES": 472,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1932,
+      "CANDIDATE": "Hoover H",
+      "VOTES": 59,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1936,
+      "CANDIDATE": "Roosevelt F D",
+      "VOTES": 523,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1936,
+      "CANDIDATE": "Landon A M",
+      "VOTES": 8,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1940,
+      "CANDIDATE": "Roosevelt F D",
+      "VOTES": 449,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1940,
+      "CANDIDATE": "Willkie W",
+      "VOTES": 82,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1944,
+      "CANDIDATE": "Roosevelt F D",
+      "VOTES": 432,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1944,
+      "CANDIDATE": "Dewey T E",
+      "VOTES": 99,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1948,
+      "CANDIDATE": "Truman H S",
+      "VOTES": 303,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1948,
+      "CANDIDATE": "Dewey T E",
+      "VOTES": 189,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1948,
+      "CANDIDATE": "Thurmond",
+      "VOTES": 39,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1952,
+      "CANDIDATE": "Eisenhower D D",
+      "VOTES": 442,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1952,
+      "CANDIDATE": "Stevenson A E",
+      "VOTES": 89,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1956,
+      "CANDIDATE": "Eisenhower D D",
+      "VOTES": 457,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1956,
+      "CANDIDATE": "Stevenson A E",
+      "VOTES": 73,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1956,
+      "CANDIDATE": "Jones",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1960,
+      "CANDIDATE": "Kennedy J F",
+      "VOTES": 303,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1960,
+      "CANDIDATE": "Nixon R M",
+      "VOTES": 219,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1960,
+      "CANDIDATE": "Byrd",
+      "VOTES": 15,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1964,
+      "CANDIDATE": "Johnson L B",
+      "VOTES": 486,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1964,
+      "CANDIDATE": "Goldwater B",
+      "VOTES": 52,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1968,
+      "CANDIDATE": "Nixon R M",
+      "VOTES": 301,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1968,
+      "CANDIDATE": "Humphrey H H",
+      "VOTES": 191,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1968,
+      "CANDIDATE": "Wallace G C",
+      "VOTES": 46,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1972,
+      "CANDIDATE": "Nixon R M",
+      "VOTES": 520,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1972,
+      "CANDIDATE": "McGovern G S",
+      "VOTES": 17,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1972,
+      "CANDIDATE": "Hospers J",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1976,
+      "CANDIDATE": "Carter J E",
+      "VOTES": 297,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1976,
+      "CANDIDATE": "Ford G R",
+      "VOTES": 240,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1976,
+      "CANDIDATE": "Reagan R W",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1980,
+      "CANDIDATE": "Reagan R W",
+      "VOTES": 489,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1980,
+      "CANDIDATE": "Carter J E",
+      "VOTES": 49,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1984,
+      "CANDIDATE": "Reagan R W",
+      "VOTES": 525,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1984,
+      "CANDIDATE": "Mondale W",
+      "VOTES": 13,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1988,
+      "CANDIDATE": "Bush G H W",
+      "VOTES": 426,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1988,
+      "CANDIDATE": "Dukakis M",
+      "VOTES": 111,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1988,
+      "CANDIDATE": "Bentsen L",
+      "VOTES": 1,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1992,
+      "CANDIDATE": "Clinton W J",
+      "VOTES": 370,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1992,
+      "CANDIDATE": "Bush G H W",
+      "VOTES": 168,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 1996,
+      "CANDIDATE": "Clinton W J",
+      "VOTES": 379,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 1996,
+      "CANDIDATE": "Dole R",
+      "VOTES": 159,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 2000,
+      "CANDIDATE": "Bush G W",
+      "VOTES": 271,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 2000,
+      "CANDIDATE": "Gore A",
+      "VOTES": 266,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 2004,
+      "CANDIDATE": "Bush G W",
+      "VOTES": 286,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 2004,
+      "CANDIDATE": "Kerry J F",
+      "VOTES": 251,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 2008,
+      "CANDIDATE": "Obama B H",
+      "VOTES": 365,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 2008,
+      "CANDIDATE": "McCain J S",
+      "VOTES": 173,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 2012,
+      "CANDIDATE": "Obama B H",
+      "VOTES": 332,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 2012,
+      "CANDIDATE": "Romney W M",
+      "VOTES": 206,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 2016,
+      "CANDIDATE": "Trump D J",
+      "VOTES": 304,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 2016,
+      "CANDIDATE": "Clinton H D R",
+      "VOTES": 227,
+      "WINNER_LOSER_INDIC": "L"
+    },
+    {
+      "ELECTION_YEAR": 2020,
+      "CANDIDATE": "Biden J",
+      "VOTES": 306,
+      "WINNER_LOSER_INDIC": "W"
+    },
+    {
+      "ELECTION_YEAR": 2020,
+      "CANDIDATE": "Trump D J",
+      "VOTES": 232,
+      "WINNER_LOSER_INDIC": "L"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+<Window x:Class="Waldwunder_Verwaltung.WaldwunderDetailsDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Waldwunder Details"
+        Height="500"
+        Width="700">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0"
+                Grid.Column="0"
+                Text="Name:"
+                FontWeight="Bold"/>
+        <TextBlock Grid.Row="0"
+                Grid.Column="1"
+                x:Name="NameText"/>
+        <TextBlock Grid.Row="1"
+                Grid.Column="0"
+                Text="Beschreibung:"
+                FontWeight="Bold"/>
+        <TextBlock Grid.Row="1"
+                Grid.Column="1"
+                x:Name="DescriptionText"
+                TextWrapping="Wrap"/>
+        <TextBlock Grid.Row="2"
+                Grid.Column="0"
+                Text="Bundesland:"
+                FontWeight="Bold"/>
+        <TextBlock Grid.Row="2"
+                Grid.Column="1"
+                x:Name="ProvinceText"/>
+        <TextBlock Grid.Row="3"
+                Grid.Column="0"
+                Text="Typ:"
+                FontWeight="Bold"/>
+        <TextBlock Grid.Row="3"
+                Grid.Column="1"
+                x:Name="TypeText"/>
+        <TextBlock Grid.Row="4"
+                Grid.Column="0"
+                Text="Koordinaten:"
+                FontWeight="Bold"/>
+        <TextBlock Grid.Row="4"
+                Grid.Column="1"
+                x:Name="LatLonText"/>
+
+        <ListBox Grid.Row="5"
+                Grid.Column="0"
+                x:Name="ImagesList"
+                Height="200"/>
+        <Border Grid.Row="5"
+                Grid.Column="1"
+                BorderBrush="Gray"
+                BorderThickness="1"
+                Margin="10,0,0,0">
+            <Image x:Name="ImagePreview"
+                    Stretch="Uniform"
+                    Height="200"/>
+        </Border>
+
+        <Button Grid.Row="6"
+                Grid.ColumnSpan="2"
+                Content="Schließen"
+                HorizontalAlignment="Right"
+                Width="100"
+                Margin="0,10,0,0"
+                Click="Close_Click"/>
+    </Grid>
+</Window>

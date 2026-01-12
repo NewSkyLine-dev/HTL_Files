@@ -1,0 +1,49 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:IndicatorTemplate">
+    <Style TargetType="{x:Type local:Indicator}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type local:Indicator}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Viewbox Stretch="Uniform" Width="{TemplateBinding ViewSize}" Height="{TemplateBinding ViewSize}">
+                            <Grid>
+                                <Image x:Name="PART_METERBACKGROUND"/>
+                                <Image x:Name="PART_METERINDICATOR"
+                                    RenderTransformOrigin=".5,.5">
+                                    <Image.RenderTransform>
+                                        <RotateTransform Angle="{Binding PointerAngle,  
+                                        RelativeSource={RelativeSource TemplatedParent}}" CenterX="0.5" CenterY="0.5"/>
+                                    </Image.RenderTransform>
+                                </Image>
+                            </Grid>
+                        </Viewbox>
+
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10,0,0">
+                            <TextBlock Text="Min: "/>
+                            <TextBlock Text="{Binding Minimum, 
+                                RelativeSource={RelativeSource TemplatedParent}, 
+                                StringFormat={}{0:F1}}" Margin="0,0,10,0" />
+
+                            <TextBlock Text="Value: "/>
+                            <TextBlock Text="{Binding Value, 
+                                RelativeSource={RelativeSource TemplatedParent}, 
+                                StringFormat={}{0:F1}}" Margin="0,0,10,0" />
+
+                            <TextBlock Text="Max: "/>
+                            <TextBlock Text="{Binding Maximum, 
+                                RelativeSource={RelativeSource TemplatedParent}, 
+                                StringFormat={}{0:F1}}" Margin="0,0,10,0" />
+                        </StackPanel>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

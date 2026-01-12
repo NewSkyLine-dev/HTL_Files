@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36603.0 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Taschenrechner", "Taschenrechner\Taschenrechner.vcxproj", "{AC7F7F8B-B933-4A7A-B109-41976AC91E56}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MathExpr", "MathExpr\MathExpr.vcxproj", "{B0F92B92-D63A-460D-9F61-8ACF20EF723C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC7F7F8B-B933-4A7A-B109-41976AC91E56}.Debug|x64.ActiveCfg = Debug|x64
+		{AC7F7F8B-B933-4A7A-B109-41976AC91E56}.Debug|x64.Build.0 = Debug|x64
+		{AC7F7F8B-B933-4A7A-B109-41976AC91E56}.Release|x64.ActiveCfg = Release|x64
+		{AC7F7F8B-B933-4A7A-B109-41976AC91E56}.Release|x64.Build.0 = Release|x64
+		{B0F92B92-D63A-460D-9F61-8ACF20EF723C}.Debug|x64.ActiveCfg = Debug|x64
+		{B0F92B92-D63A-460D-9F61-8ACF20EF723C}.Debug|x64.Build.0 = Debug|x64
+		{B0F92B92-D63A-460D-9F61-8ACF20EF723C}.Release|x64.ActiveCfg = Release|x64
+		{B0F92B92-D63A-460D-9F61-8ACF20EF723C}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F798F90-A3AF-462C-845A-6667F52F811B}
+	EndGlobalSection
+EndGlobal

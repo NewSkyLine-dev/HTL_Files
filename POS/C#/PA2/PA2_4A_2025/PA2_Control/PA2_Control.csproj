@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Uhr_B.png" />
+    <None Remove="Uhr_S.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Uhr_B.png" />
+    <Resource Include="Uhr_S.png" />
+  </ItemGroup>
+
+</Project>

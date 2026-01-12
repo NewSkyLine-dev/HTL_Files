@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35723.152 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login Registration", "Login Registration\Login Registration.csproj", "{70FB24C3-09C3-431D-BAB0-C2A2BDFEC522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginLibrary", "LoginLibrary\LoginLibrary.csproj", "{FE2AC2B5-E010-455C-90DB-5241A37FB476}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70FB24C3-09C3-431D-BAB0-C2A2BDFEC522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70FB24C3-09C3-431D-BAB0-C2A2BDFEC522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70FB24C3-09C3-431D-BAB0-C2A2BDFEC522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70FB24C3-09C3-431D-BAB0-C2A2BDFEC522}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE2AC2B5-E010-455C-90DB-5241A37FB476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE2AC2B5-E010-455C-90DB-5241A37FB476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE2AC2B5-E010-455C-90DB-5241A37FB476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE2AC2B5-E010-455C-90DB-5241A37FB476}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AB2414F2-A512-46A4-9E56-54B313C88435}
+	EndGlobalSection
+EndGlobal

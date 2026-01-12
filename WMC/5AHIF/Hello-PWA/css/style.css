@@ -1,0 +1,33 @@
+/*
+ * File: style.css
+ * Project: css
+ * File Created: Friday, 5th September 2025 11:58:44 am
+ * Author: Fabian Oppermann (fabian.oppermann@gmx.net)
+ * -----
+ * Last Modified: Friday, 5th September 2025 11:59:36 am
+ * Modified By: Fabian Oppermann (fabian.oppermann@gmx.net)
+ */
+
+body {
+    font-family: sans-serif;
+}
+
+/* Make content area fill the entire browser window */
+html,
+.fullscreen {
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* Center the content in the browser window */
+.container {
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+}

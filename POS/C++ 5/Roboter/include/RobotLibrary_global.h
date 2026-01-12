@@ -1,0 +1,12 @@
+#ifndef ROBOTLIBRARY_GLOBAL_H
+#define ROBOTLIBRARY_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(ROBOTLIBRARY_LIBRARY)
+#define ROBOTLIBRARY_EXPORT Q_DECL_EXPORT
+#else
+#define ROBOTLIBRARY_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // ROBOTLIBRARY_GLOBAL_H

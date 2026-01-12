@@ -1,0 +1,88 @@
+@startuml Taschenrechner - Interpreter Pattern
+
+title Klassenstruktur für das Interpreter Pattern
+
+' === Interface ===
+interface IExpression {
+    +Evaluate(context: EvaluationContext): double
+    +GetVariables(): ISet<char>
+}
+
+' === Terminale Ausdrücke ===
+class NumberExpression {
+    -Value: double
+    +NumberExpression(value: double)
+    +Evaluate(context: EvaluationContext): double
+    +GetVariables(): ISet<char>
+}
+
+class VariableExpression {
+    -Name: char
+    +VariableExpression(name: char)
+    +Evaluate(context: EvaluationContext): double
+    +GetVariables(): ISet<char>
+}
+
+' === Nicht-terminale Ausdrücke ===
+class BinaryExpression {
+    -Left: IExpression
+    -Right: IExpression
+    -Operator: BinaryOperator
+    +BinaryExpression(left: IExpression, op: BinaryOperator, right: IExpression)
+    +Evaluate(context: EvaluationContext): double
+    +GetVariables(): ISet<char>
+}
+
+class UnaryExpression {
+    -Operand: IExpression
+    -Operator: UnaryOperator
+    +UnaryExpression(op: UnaryOperator, operand: IExpression)
+    +Evaluate(context: EvaluationContext): double
+    +GetVariables(): ISet<char>
+}
+
+' === Enums ===
+enum BinaryOperator {
+    Add
+    Subtract
+    Multiply
+    Divide
+    Power
+}
+
+enum UnaryOperator {
+    Negate
+}
+
+' === Kontext ===
+class EvaluationContext {
+    -_variables: Dictionary<char, double>
+    +SetVariable(name: char, value: double): void
+    +GetVariable(name: char): double
+    +HasVariable(name: char): bool
+}
+
+' === Beziehungen ===
+IExpression <|.. NumberExpression : implements
+IExpression <|.. VariableExpression : implements
+IExpression <|.. BinaryExpression : implements
+IExpression <|.. UnaryExpression : implements
+
+BinaryExpression --> IExpression : Left
+BinaryExpression --> IExpression : Right
+BinaryExpression --> BinaryOperator : Operator
+
+UnaryExpression --> IExpression : Operand
+UnaryExpression --> UnaryOperator : Operator
+
+IExpression ..> EvaluationContext : uses
+
+note right of IExpression
+  Interpreter Pattern:
+  - IExpression ist das abstrakte Ausdruck-Interface
+  - NumberExpression und VariableExpression sind Terminale
+  - BinaryExpression und UnaryExpression sind Nicht-Terminale
+  - Evaluate() ist die interpret()-Methode
+end note
+
+@enduml

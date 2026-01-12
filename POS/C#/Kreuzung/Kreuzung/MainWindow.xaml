@@ -1,0 +1,124 @@
+﻿<Window x:Class="Kreuzung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kreuzung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="0,0,0,10">
+            <Label Content="Anzahl der Autos:" VerticalAlignment="Center"/>
+            <TextBox x:Name="carCountTextBox" Width="50" Margin="5,0"/>
+            <Label Content="Kreuzungstyp:" VerticalAlignment="Center" Margin="10,0,0,0"/>
+            <ComboBox x:Name="crossroadComboBox" Width="150" Margin="5,0"/>
+            <Button x:Name="StartButton" Content="Start" Click="StartButton_Click" Margin="10,0,0,0"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+
+            <GroupBox Header="Norden" Grid.Row="0" Grid.Column="1" HorizontalContentAlignment="Center">
+                <ListBox x:Name="northListBox" Width="Auto" Height="100" ItemsSource="{Binding NorthCars}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1} - {2}">
+                                        <Binding Path="Id"/>
+                                        <Binding Path="Status"/>
+                                        <Binding Path="Direction"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <GroupBox Header="Westen" Grid.Row="1" Grid.Column="0" VerticalContentAlignment="Center">
+                <ListBox x:Name="westListBox" Width="Auto" Height="100" ItemsSource="{Binding WestCars}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1} - {2}">
+                                        <Binding Path="Id"/>
+                                        <Binding Path="Status"/>
+                                        <Binding Path="Direction"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <GroupBox Header="Kreuzung" Grid.Row="1" Grid.Column="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                <ListBox x:Name="middleListBox" Width="Auto" Height="100" ItemsSource="{Binding MiddleCars}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1} - {2}">
+                                        <Binding Path="Id"/>
+                                        <Binding Path="Status"/>
+                                        <Binding Path="Direction"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <GroupBox Header="Osten" Grid.Row="1" Grid.Column="2" VerticalContentAlignment="Center">
+                <ListBox x:Name="eastListBox" Width="Auto" Height="100" ItemsSource="{Binding EastCars}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1} - {2}">
+                                        <Binding Path="Id"/>
+                                        <Binding Path="Status"/>
+                                        <Binding Path="Direction"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+
+            <GroupBox Header="Süden" Grid.Row="2" Grid.Column="1" HorizontalContentAlignment="Center">
+                <ListBox x:Name="southListBox" Width="Auto" Height="100" ItemsSource="{Binding SouthCars}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="{}{0} - {1} - {2}">
+                                        <Binding Path="Id"/>
+                                        <Binding Path="Status"/>
+                                        <Binding Path="Direction"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>

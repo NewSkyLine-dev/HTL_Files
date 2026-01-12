@@ -1,0 +1,62 @@
+﻿<Window x:Class="Achterbahn.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Achterbahn"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <!-- Titel -->
+            <TextBlock Text="Achterbahn Simulation" FontSize="20" HorizontalAlignment="Center" Margin="10" />
+
+            <!-- Parameter-Einstellungen -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <TextBlock Text="Passagiere:" Margin="5" VerticalAlignment="Center" />
+                <Slider x:Name="PassengerSlider" Minimum="5" Maximum="20" Value="10" Width="100" Margin="5" TickFrequency="1" IsSnapToTickEnabled="True" />
+                <TextBlock Text="{Binding Value, ElementName=PassengerSlider}" Width="50" Margin="5" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <TextBlock Text="Wagenkapazität:" Margin="5" VerticalAlignment="Center" />
+                <Slider x:Name="CapacitySlider" Minimum="2" Maximum="10" Value="5" Width="100" Margin="5" TickFrequency="1" IsSnapToTickEnabled="True" />
+                <TextBlock Text="{Binding Value, ElementName=CapacitySlider}" Width="50" Margin="5" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <TextBlock Text="Rundenanzahl:" Margin="5" VerticalAlignment="Center" />
+                <Slider x:Name="RideSlider" Minimum="1" Maximum="10" Value="3" Width="100" Margin="5" TickFrequency="1" IsSnapToTickEnabled="True" />
+                <TextBlock Text="{Binding Value, ElementName=RideSlider}" Width="50" Margin="5" />
+            </StackPanel>
+
+            <!-- Wagen Status -->
+            <TextBlock x:Name="WagonStatus" FontSize="16" HorizontalAlignment="Center" Margin="10" Foreground="DarkBlue">
+                <TextBlock.Text>
+                    <MultiBinding StringFormat="{} Wagen Status: {0}">
+                        <Binding Path="Rollercoaster.Status"/>
+                    </MultiBinding>
+                </TextBlock.Text>
+            </TextBlock>
+
+            <!-- Anzeige der Passagierstatus -->
+            <ItemsControl x:Name="PassengerStatus" ItemsSource="{Binding Rollercoaster.Queue}" Margin="10">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{} {0}: {1}">
+                                    <Binding Path="Name" />
+                                    <Binding Path="Status" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!-- Button zum Starten der Simulation -->
+            <Button x:Name="StartButton" Content="Start Simulation" Width="150" Height="30" HorizontalAlignment="Center" Click="StartButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

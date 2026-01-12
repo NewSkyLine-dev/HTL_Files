@@ -1,0 +1,32 @@
+﻿<Window
+    x:Class="Login_Registration.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Login_Registration"
+    xmlns:login="clr-namespace:LoginLibrary;assembly=LoginLibrary"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Login Register"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <StackPanel>
+            <login:LoginControl
+                x:Name="loginControl"
+                Margin="10"
+                Login="loginControl_Login"
+                SwitchToRegistration="loginControl_SwitchToRegistration"
+                Visibility="{Binding LoginControlVisibility}" />
+
+            <login:RegistrationControl
+                x:Name="registrationControl"
+                Margin="10"
+                Cancel="registrationControl_Cancel"
+                Register="registrationControl_Register"
+                SwitchToLogin="registrationControl_SwitchToLogin"
+                UseEmail="{Binding UseEmail}"
+                Visibility="{Binding RegistrationControlVisibility}" />
+        </StackPanel>
+    </Grid>
+</Window>

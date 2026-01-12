@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreaded Counter", "Multithreaded Counter\Multithreaded Counter.csproj", "{EEFB4AB3-13F8-4A7E-9A93-8059D60E2D2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEFB4AB3-13F8-4A7E-9A93-8059D60E2D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEFB4AB3-13F8-4A7E-9A93-8059D60E2D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEFB4AB3-13F8-4A7E-9A93-8059D60E2D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEFB4AB3-13F8-4A7E-9A93-8059D60E2D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7212FC2F-F046-498C-8BC5-2D4A947410DD}
+	EndGlobalSection
+EndGlobal

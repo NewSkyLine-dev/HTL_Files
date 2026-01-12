@@ -1,0 +1,80 @@
+[{
+  "_id": "Virginia",
+  "count": 8
+},
+{
+  "_id": "Ohio",
+  "count": 7
+},
+{
+  "_id": "New York",
+  "count": 5
+},
+{
+  "_id": "Massachusetts",
+  "count": 4
+},
+{
+  "_id": "California",
+  "count": 2
+},
+{
+  "_id": "Texas",
+  "count": 2
+},
+{
+  "_id": "Vermont",
+  "count": 2
+},
+{
+  "_id": "North Carolina",
+  "count": 2
+},
+{
+  "_id": "Pennsylvania",
+  "count": 2
+},
+{
+  "_id": "Illinois",
+  "count": 1
+},
+{
+  "_id": "Kentucky",
+  "count": 1
+},
+{
+  "_id": "Iowa",
+  "count": 1
+},
+{
+  "_id": "Nebraska",
+  "count": 1
+},
+{
+  "_id": "Arkansas",
+  "count": 1
+},
+{
+  "_id": "South Carolina",
+  "count": 1
+},
+{
+  "_id": "New Hampshire",
+  "count": 1
+},
+{
+  "_id": "New Jersey",
+  "count": 1
+},
+{
+  "_id": "Missouri",
+  "count": 1
+},
+{
+  "_id": "Georgia",
+  "count": 1
+},
+{
+  "_id": "Hawaii",
+  "count": 1
+}]

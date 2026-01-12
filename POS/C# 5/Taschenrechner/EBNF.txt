@@ -1,0 +1,21 @@
+// EBNF Grammatik für den Taschenrechner
+// ========================================
+
+<expression>      ::= <term> { <additive-op> <term> }
+<term>            ::= <power> { <multiplicative-op> <power> }
+<power>           ::= <unary> [ "^" <power> ]
+<unary>           ::= [ "-" ] <factor>
+<factor>          ::= <number> | <variable> | "(" <expression> ")"
+<number>          ::= <digit> { <digit> } [ ("." | ",") <digit> { <digit> } ]
+<variable>        ::= <letter>
+<additive-op>     ::= "+" | "-"
+<multiplicative-op> ::= "*" | "/"
+<digit>           ::= "0" | "1" | "2" | ... | "9"
+<letter>          ::= "a" | "b" | "c" | ... | "z"
+
+// Operatorpriorität (von niedrig nach hoch):
+// 1. Addition, Subtraktion (+, -)
+// 2. Multiplikation, Division (*, /)
+// 3. Potenz (^) - rechtsassoziativ
+// 4. Unäres Minus (-)
+// 5. Klammern, Zahlen, Variablen

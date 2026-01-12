@@ -1,0 +1,6 @@
+code;name;en_name;;;;;;;
+F-KRE;Anzahl der Datensätze F-KRE;Number of records F-KRE;;;;;;;
+C-TUM_ICD10_3ST-0;Tumore ICD/10 3-Steller;;;;;;;;
+C-BERJ-0;Berichtsjahr;Reporting year;;;;;;;
+C-BUNDESLAND-0;Bundesland;Province of residence;;;;;;;
+C-KRE_GESCHLECHT-0;Geschlecht;Sex;;;;;;;
