@@ -1,0 +1,29 @@
+﻿<Window x:Class="PA2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PA2"
+        xmlns:painter="clr-namespace:Painter;assembly=Painter"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <painter:PainterControl Grid.Column="0" Name="Painter"></painter:PainterControl>
+
+        <StackPanel Grid.Column="1">
+            <TextBox    Height="200px"
+                         x:Name="ProgramInput"
+                         AcceptsReturn="True"
+                         AcceptsTab="True"
+                         VerticalScrollBarVisibility="Auto"
+                         HorizontalScrollBarVisibility="Auto"
+                         TextWrapping="NoWrap"/>
+            <Button Click="Button_Click">Ok</Button>
+        </StackPanel>
+    </Grid>
+</Window>
