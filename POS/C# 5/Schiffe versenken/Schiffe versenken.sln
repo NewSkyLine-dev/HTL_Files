@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36717.8 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11408.92 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schiffe versenken", "Schiffe versenken\Schiffe versenken.csproj", "{47712EC9-DCF8-47C9-AC6E-FA6C819406D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkLib", "NetworkLib\NetworkLib.csproj", "{81D26153-967F-4A79-9BD8-DF978F7C7B2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{47712EC9-DCF8-47C9-AC6E-FA6C819406D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47712EC9-DCF8-47C9-AC6E-FA6C819406D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47712EC9-DCF8-47C9-AC6E-FA6C819406D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81D26153-967F-4A79-9BD8-DF978F7C7B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81D26153-967F-4A79-9BD8-DF978F7C7B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81D26153-967F-4A79-9BD8-DF978F7C7B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81D26153-967F-4A79-9BD8-DF978F7C7B2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

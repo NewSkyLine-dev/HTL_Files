@@ -1,0 +1,48 @@
+﻿<Window x:Class="Bilderverwaltungsprogramm.AlbumDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bilderverwaltungsprogramm"
+        mc:Ignorable="d"
+        Title="Neues Album" Width="450" Height="Auto" WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize" SizeToContent="Height">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="8"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="12"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- 1st Input Row: Question -->
+        <Label Grid.Row="0" Grid.Column="0" Content="Dialogname:" VerticalContentAlignment="Center"/>
+        <TextBox Name="txtAnswer" Grid.Row="0" Grid.Column="1" MinHeight="28" Margin="0,0,12,0" />
+
+        <!-- 2nd Input Row: Album Name + Add Button -->
+        <Label Grid.Row="2" Grid.Column="0" Content="Unterordnername:" VerticalContentAlignment="Center"/>
+        <TextBox Name="txtAlbumName" Grid.Row="2" Grid.Column="1" MinHeight="28" Margin="0,0,12,0" ToolTip="Albumname eingeben"/>
+        <Button Name="btnAddAlbum" Grid.Row="2" Grid.Column="2" Content="Hinzufügen" Width="85" Height="28" Margin="0,0,0,0" Click="btnAddAlbum_Click" HorizontalContentAlignment="Center"/>
+
+        <!-- ListBox: Unterordner -->
+        <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" Content="Unterordner:" Margin="0,0,0,4"/>
+        <ListBox Name="cbUnterordner" Grid.Row="6" Grid.ColumnSpan="3" ItemsSource="{Binding DisplayUnterordner}" />
+
+        <!-- Dialog Buttons -->
+        <WrapPanel Grid.Row="8" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+            <Button IsDefault="True" Name="btnDialogOk" Click="btnDialogOk_Click" 
+                    MinWidth="75" Margin="0,0,12,0" Padding="12,6">OK</Button>
+            <Button IsCancel="True" MinWidth="75" Padding="12,6">Abbrechen</Button>
+        </WrapPanel>
+    </Grid>
+</Window>

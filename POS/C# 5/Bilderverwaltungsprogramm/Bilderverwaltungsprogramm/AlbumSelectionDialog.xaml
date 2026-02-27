@@ -1,0 +1,29 @@
+<Window x:Class="Bilderverwaltungsprogramm.AlbumSelectionDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bilderverwaltungsprogramm"
+        mc:Ignorable="d"
+        Title="Album auswählen" Height="250" Width="400"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="15"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Content="Wählen Sie das Zielalbum aus:"/>
+        
+        <ListBox Grid.Row="2" x:Name="lstAlbums" ItemsSource="{Binding Albums}" 
+                 SelectedItem="{Binding SelectedAlbum}"/>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button IsDefault="True" Click="BtnOk_Click" MinWidth="75" Margin="0,0,10,0" Padding="12,6">OK</Button>
+            <Button IsCancel="True" MinWidth="75" Padding="12,6">Abbrechen</Button>
+        </StackPanel>
+    </Grid>
+</Window>

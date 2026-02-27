@@ -3,7 +3,6 @@ using System.Windows;
 using System.Windows.Input;
 using Schiffe_versenken.Controller;
 using Schiffe_versenken.Models;
-using Schiffe_versenken.Network;
 using Schiffe_versenken.Views;
 
 namespace Schiffe_versenken.ViewModels;
@@ -12,7 +11,7 @@ public class GameViewModel : BaseViewModel
 {
     private readonly BoardController _ownBoardController;
     private readonly BoardController _enemyBoardController;
-    private NetworkService? _networkService;
+    private NetworkController? _networkController;
 
     private GamePhase _gamePhase = GamePhase.WaitingForConnection;
     private bool _isMyTurn;
@@ -22,6 +21,7 @@ public class GameViewModel : BaseViewModel
     private string _connectionAddress = "127.0.0.1";
     private int _connectionPort = 5000;
     private bool _isHost;
+    private bool _opponentReady;
     private int _lastAttackX, _lastAttackY;
 
     public GameViewModel()
@@ -39,7 +39,7 @@ public class GameViewModel : BaseViewModel
         OwnBoardViewModel = new BoardViewViewModel(OwnBoardCells, "Eigenes Spielfeld");
         EnemyBoardViewModel = new BoardViewViewModel(EnemyBoardCells, "Gegnerisches Spielfeld");
 
-        // Erstes Schiff auswählen
+        // Erstes Schiff auswÃ¤hlen
         SelectedShip = ShipsToPlace.FirstOrDefault();
 
         // Commands
@@ -156,17 +156,26 @@ public class GameViewModel : BaseViewModel
         }
     }
 
+    private void RegisterNetworkEvents()
+    {
+        if (_networkController == null) return;
+        _networkController.OnReadyReceived += HandleReadyReceived;
+        _networkController.OnStartPlayerReceived += HandleStartPlayerReceived;
+        _networkController.OnTurnReceived += HandleTurnReceived;
+        _networkController.OnAnswerReceived += HandleAnswerReceived;
+        _networkController.OnConnectionLost += HandleConnectionLost;
+    }
+
     private async void StartAsHost(object? parameter)
     {
         try
         {
             IsHost = true;
-            _networkService = new NetworkService();
-            _networkService.OnMessageReceived += HandleNetworkMessage;
-            _networkService.OnConnectionLost += HandleConnectionLost;
+            _networkController = new NetworkController();
+            RegisterNetworkEvents();
 
             StatusMessage = $"Warte auf Verbindung auf Port {ConnectionPort}...";
-            await _networkService.StartHostAsync(ConnectionPort);
+            await _networkController.StartHostAsync(ConnectionPort);
 
             GamePhase = GamePhase.PlacingShips;
             StatusMessage = "Gegner verbunden! Platziere deine Schiffe.";
@@ -182,15 +191,14 @@ public class GameViewModel : BaseViewModel
         try
         {
             IsHost = false;
-            _networkService = new NetworkService();
-            _networkService.OnMessageReceived += HandleNetworkMessage;
-            _networkService.OnConnectionLost += HandleConnectionLost;
+            _networkController = new NetworkController();
+            RegisterNetworkEvents();
 
             StatusMessage = $"Verbinde mit {ConnectionAddress}:{ConnectionPort}...";
-            await _networkService.ConnectToHostAsync(ConnectionAddress, ConnectionPort);
+            await _networkController.ConnectToHostAsync(ConnectionAddress, ConnectionPort);
 
             GamePhase = GamePhase.PlacingShips;
-            StatusMessage = "Verbunden! Platziere deine Schiffe.";
+            StatusMessage = "Verbunden. Platziere deine Schiffe.";
         }
         catch (Exception ex)
         {
@@ -198,39 +206,40 @@ public class GameViewModel : BaseViewModel
         }
     }
 
-    private void HandleNetworkMessage(string message)
+    private void HandleReadyReceived()
     {
         Application.Current.Dispatcher.Invoke(() =>
         {
-            var parts = message.Split(':');
-            switch (parts[0])
+            _opponentReady = true;
+            if (GamePhase == GamePhase.WaitingForOpponent && IsHost)
             {
-                case "READY":
-                    if (GamePhase == GamePhase.WaitingForOpponent)
-                    {
-                        GamePhase = GamePhase.Playing;
-                        IsMyTurn = IsHost;
-                    }
-                    break;
-
-                case "ATTACK":
-                    if (parts.Length >= 3 && int.TryParse(parts[1], out int ax) && int.TryParse(parts[2], out int ay))
-                    {
-                        HandleIncomingAttack(ax, ay);
-                    }
-                    break;
-
-                case "RESULT":
-                    if (parts.Length >= 2)
-                    {
-                        bool hit = parts[1] == "HIT";
-                        bool sunk = parts.Length >= 3 && parts[2] == "SUNK";
-                        bool gameOver = parts.Length >= 4 && parts[3] == "GAMEOVER";
-
-                        HandleAttackResult(hit, sunk, gameOver);
-                    }
-                    break;
+                BeginGame();
             }
+        });
+    }
+
+    private void HandleStartPlayerReceived(StartPlayerPacket packet)
+    {
+        Application.Current.Dispatcher.Invoke(() =>
+        {
+            IsMyTurn = packet.IsFirstPlayer;
+            GamePhase = GamePhase.Playing;
+        });
+    }
+
+    private void HandleTurnReceived(TurnPacket packet)
+    {
+        Application.Current.Dispatcher.Invoke(() =>
+        {
+            HandleIncomingAttack(packet.X, packet.Y);
+        });
+    }
+
+    private void HandleAnswerReceived(AnswerPacket packet)
+    {
+        Application.Current.Dispatcher.Invoke(() =>
+        {
+            HandleAttackResult(packet.Hit, packet.Sunk, packet.GameOver);
         });
     }
 
@@ -238,7 +247,7 @@ public class GameViewModel : BaseViewModel
     {
         Application.Current.Dispatcher.Invoke(() =>
         {
-            StatusMessage = "Verbindung verloren!";
+            StatusMessage = "Verbindung verloren";
             GamePhase = GamePhase.GameOver;
         });
     }
@@ -248,7 +257,7 @@ public class GameViewModel : BaseViewModel
         if (parameter is Ship ship && !ship.IsPlaced)
         {
             SelectedShip = ship;
-            StatusMessage = $"Platziere: {ship.Name} (Größe: {ship.Size})";
+            StatusMessage = $"Platziere: {ship.Name} (GrÃ¶ÃŸe: {ship.Size})";
         }
     }
 
@@ -265,11 +274,11 @@ public class GameViewModel : BaseViewModel
 
             if (ShipsToPlace.Count == 0)
             {
-                StatusMessage = "Alle Schiffe platziert! Drücke 'Bereit' zum Starten.";
+                StatusMessage = "Alle Schiffe platziert. DrÃ¼cke 'Bereit' zum Starten.";
             }
             else
             {
-                StatusMessage = $"Platziere: {SelectedShip?.Name} (Größe: {SelectedShip?.Size})";
+                StatusMessage = $"Platziere: {SelectedShip?.Name} (GrÃ¶ÃŸe: {SelectedShip?.Size})";
             }
         }
         else
@@ -278,30 +287,33 @@ public class GameViewModel : BaseViewModel
         }
     }
 
-    public void AttackCell(int x, int y)
+    public async void AttackCell(int x, int y)
     {
         if (GamePhase != GamePhase.Playing || !IsMyTurn)
             return;
 
         _lastAttackX = x;
         _lastAttackY = y;
-        _networkService?.SendMessage($"ATTACK:{x}:{y}");
+        await (_networkController?.SendTurnAsync(new TurnPacket { X = x, Y = y }) ?? Task.CompletedTask);
         IsMyTurn = false;
         StatusMessage = "Warte auf Antwort...";
     }
 
-    private void HandleIncomingAttack(int x, int y)
+    private async void HandleIncomingAttack(int x, int y)
     {
         var (isHit, isSunk, ship) = _ownBoardController.TryHit(x, y);
         RefreshOwnBoardCells();
 
-        string result = isHit ? "HIT" : "MISS";
-        if (isSunk) result += ":SUNK";
-        if (_ownBoardController.AllShipsSunk()) result += ":GAMEOVER";
+        bool gameOver = _ownBoardController.AllShipsSunk();
 
-        _networkService?.SendMessage($"RESULT:{result}");
+        await (_networkController?.SendAnswerAsync(new AnswerPacket
+        {
+            Hit = isHit,
+            Sunk = isSunk,
+            GameOver = gameOver
+        }) ?? Task.CompletedTask);
 
-        if (_ownBoardController.AllShipsSunk())
+        if (gameOver)
         {
             GamePhase = GamePhase.GameOver;
             StatusMessage = "Niederlage! Alle deine Schiffe wurden versenkt.";
@@ -339,8 +351,8 @@ public class GameViewModel : BaseViewModel
     {
         IsPlacingHorizontal = !IsPlacingHorizontal;
         StatusMessage = IsPlacingHorizontal 
-            ? $"Horizontal: {SelectedShip?.Name} (Größe: {SelectedShip?.Size})" 
-            : $"Vertikal: {SelectedShip?.Name} (Größe: {SelectedShip?.Size})";
+            ? $"Horizontal: {SelectedShip?.Name} (GrÃ¶ÃŸe: {SelectedShip?.Size})" 
+            : $"Vertikal: {SelectedShip?.Name} (GrÃ¶ÃŸe: {SelectedShip?.Size})";
     }
 
     private bool CanStartGame()
@@ -348,11 +360,29 @@ public class GameViewModel : BaseViewModel
         return GamePhase == GamePhase.PlacingShips && ShipsToPlace.Count == 0;
     }
 
-    private void ConfirmShipsPlaced()
+    private async void ConfirmShipsPlaced()
     {
         GamePhase = GamePhase.WaitingForOpponent;
         StatusMessage = "Warte auf Gegner...";
-        _networkService?.SendMessage("READY");
+
+        await (_networkController?.SendReadyAsync() ?? Task.CompletedTask);
+
+        if (_opponentReady && IsHost)
+        {
+            BeginGame();
+        }
+    }
+
+    private async void BeginGame()
+    {
+        var random = new Random();
+        bool clientGoesFirst = random.NextDouble() > 0.5;
+
+        await (_networkController?.SendStartPlayerAsync(
+            new StartPlayerPacket { IsFirstPlayer = clientGoesFirst }) ?? Task.CompletedTask);
+
+        IsMyTurn = !clientGoesFirst;
+        GamePhase = GamePhase.Playing;
     }
 
     private void ResetBoard()
@@ -365,7 +395,7 @@ public class GameViewModel : BaseViewModel
         }
         SelectedShip = ShipsToPlace.FirstOrDefault();
         InitializeBoardCells();
-        StatusMessage = $"Board zurückgesetzt. Platziere: {SelectedShip?.Name} (Größe: {SelectedShip?.Size})";
+        StatusMessage = $"Board zurÃ¼ckgesetzt. Platziere: {SelectedShip?.Name} (GrÃ¶ÃŸe: {SelectedShip?.Size})";
     }
 
     private void RefreshOwnBoardCells()
@@ -388,7 +418,7 @@ public class GameViewModel : BaseViewModel
     {
         if (GamePhase == GamePhase.Playing)
         {
-            StatusMessage = IsMyTurn ? "Du bist dran! Wähle ein Feld zum Angreifen." : "Gegner ist dran...";
+            StatusMessage = IsMyTurn ? "Du bist dran! WÃ¤hle ein Feld zum Angreifen." : "Gegner ist dran...";
         }
     }
 
