@@ -17,7 +17,6 @@ public class Album
         Unterordner = unterordner;
     }
 
-    // Parameterloser Konstruktor für die XML-Serialisierung
     public Album()
     {
         Unterordner = [];

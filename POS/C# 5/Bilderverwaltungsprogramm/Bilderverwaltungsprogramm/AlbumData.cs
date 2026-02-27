@@ -20,14 +20,14 @@ public class AlbumData
     {
         Name = string.Empty;
         Path = string.Empty;
-        ImagePaths = new List<string>();
+        ImagePaths = [];
     }
 
     public AlbumData(string name, string path)
     {
         Name = name;
         Path = path;
-        ImagePaths = new List<string>();
+        ImagePaths = [];
     }
 
     public void RefreshImagePaths()
