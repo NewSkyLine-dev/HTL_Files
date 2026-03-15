@@ -1,29 +1,43 @@
-import { Component, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NgIf } from '@angular/common';
 import { PushService } from './services/push';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, FormsModule],
+  imports: [FormsModule, NgIf],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App implements OnInit {
   message = '';
+  sendStatus = '';
 
-  constructor(private push: PushService) {}
+  constructor(public push: PushService) {}
 
-  ngOnInit() {
-    this.push.requestPermission();
+  get registrationStatus() {
+    return this.push.registrationStatus;
+  }
+
+  async ngOnInit() {
+    await this.push.requestPermission();
     this.push.listen();
   }
 
   async send() {
-    await fetch('http://localhost:3000/send', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message: this.message }),
-    });
+    if (!this.message.trim()) return;
+    this.sendStatus = 'Senden...';
+    try {
+      const res = await fetch('http://localhost:3333/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ message: this.message }),
+      });
+      const data = await res.json();
+      this.sendStatus = `Gesendet! Erfolgreich: ${data.successCount}, Fehler: ${data.failureCount}`;
+      this.message = '';
+    } catch (e: any) {
+      this.sendStatus = 'Fehler beim Senden: ' + (e?.message ?? e);
+    }
   }
 }

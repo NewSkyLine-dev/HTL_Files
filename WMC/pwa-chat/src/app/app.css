@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #1a73e8;
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+}
+
+.status-bar {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #e8f0fe;
+  color: #1a73e8;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+  word-break: break-all;
+}
+
+.status-bar.success {
+  background: #e6f4ea;
+  color: #188038;
+}
+
+.status-bar.error {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.send-section {
+  display: flex;
+  gap: 8px;
+}
+
+input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #1a73e8;
+}
+
+button {
+  padding: 10px 20px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover:not(:disabled) {
+  background: #1557b0;
+}
+
+button:disabled {
+  background: #93baf8;
+  cursor: not-allowed;
+}
+
+.send-status {
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: #5f6368;
+}

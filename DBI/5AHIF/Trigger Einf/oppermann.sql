@@ -1,4 +1,15 @@
-CREATE TABLE log (
+
+--- Startwert selber einfügen
+SET SERVEROUTPUT ON;
+DECLARE
+v_rowcnt number := 0;
+BEGIN
+SELECT count(*) INTO v_rowcnt FROM emp;
+INSERT INTO emp_count VALUES ('INIT',sysdate,v_rowcnt);
+END;
+/
+
+CREATE TABLE IF NOT EXISTS log (
     empno NUMBER NOT NULL,
     log_message VARCHAR2(200),
     log_date DATE DEFAULT SYSDATE,
@@ -25,6 +36,8 @@ BEGIN
     VALUES (:OLD.id, 'Gehalt Update Erfolgreich - altes Gehalt: ' || :OLD.sal || ', neues Gehalt: ' || :NEW.sal);
 END;
 /
+
+
 
 -- Stufe 2
 CREATE OR REPLACE TRIGGER trg_emp_sal_before_update

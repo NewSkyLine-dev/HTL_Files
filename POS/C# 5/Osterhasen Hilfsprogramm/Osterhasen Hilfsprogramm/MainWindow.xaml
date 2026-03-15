@@ -1,0 +1,52 @@
+﻿<Window x:Class="Osterhasen_Hilfsprogramm.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Wiener Neustadt Osterhasen Planer" 
+        Height="700" Width="1000" 
+        WindowStyle="SingleBorderWindow" 
+        ResizeMode="CanResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <!-- Map takes most space -->
+            <RowDefinition Height="Auto"/>
+            <!-- Controls -->
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" ClipToBounds="True">
+            <Viewbox StretchDirection="DownOnly" ClipToBounds="True">
+                <Canvas Width="{Binding CanvasWidth}" Height="{Binding CanvasHeight}" Name="cvMap">
+                    <Image Source="/Images/Stadtplan-Wiener-Neustadt.jpg" 
+                   Stretch="UniformToFill" 
+                   Canvas.Left="0" Canvas.Top="0"/>
+                </Canvas>
+            </Viewbox>
+        </Border>
+
+        <!-- Modern control panel with overlay effect -->
+        <Border Grid.Row="1" Padding="20" Margin="10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <TextBlock Text="Name" Margin="0,0,0,5"/>
+                    <TextBox Width="150" Name="tbName"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <TextBlock Text="X Koordinate" Margin="0,0,0,5"/>
+                    <TextBox Width="80" Name="tbXCoord"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Text="Y Koordinate" Margin="0,0,0,5"/>
+                    <TextBox Width="80" Name="tbYCoord"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="0,0,20,0">
+                    <TextBlock Text="Anzahl Helfer" Margin="0,0,0,5"/>
+                    <TextBox Width="60" Name="tbHelperCount" Text="3"/>
+                </StackPanel>
+                <Button Content="Speichern" 
+                        Width="100" Height="50" Margin="20,0,20,0" Click="Save_Button"/>
+                <Button Content="Cluster" Width="100" Click="Cluster_Button"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

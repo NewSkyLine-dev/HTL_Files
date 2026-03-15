@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>Osterhasen_Hilfsprogramm</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\CopyMe.SQLite.tt.txt" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\DataAnnotations.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\DataModel.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\EditableObject.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\Equatable.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\Humanizer.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\LinqToDB.SQLite.Tools.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\LinqToDB.SQLite.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\LinqToDB.Tools.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\LinqToDB.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\MultipleFiles.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\NotifyDataErrorInfo.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\NotifyPropertyChanged.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\ObsoleteAttributes.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\PluralizationService.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\README.md" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\T4Model.ttinclude" />
+    <None Remove="C:\Users\fabia\.nuget\packages\linq2db.sqlite\6.1.0\contentFiles\any\any\LinqToDB.Templates\Validation.ttinclude" />
+    <None Remove="Images\Stadtplan-Wiener-Neustadt.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="linq2db" Version="6.1.0" />
+    <PackageReference Include="linq2db.SQLite" Version="6.1.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Stadtplan-Wiener-Neustadt.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
