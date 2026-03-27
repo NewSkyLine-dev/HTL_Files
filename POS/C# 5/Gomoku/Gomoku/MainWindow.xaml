@@ -1,0 +1,35 @@
+﻿<Window x:Class="Gomoku.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gomoku"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="3">
+            <ComboBox Margin="0,0,7,0" SelectedIndex="0" VerticalAlignment="Center" Name="cbPlayer1">
+                <ComboBoxItem>Netzwerk</ComboBoxItem>
+                <ComboBoxItem>Lokal</ComboBoxItem>
+            </ComboBox>
+            <ComboBox Margin="0,0,7,0" SelectedIndex="0" VerticalAlignment="Center" Name="cbPlayer2">
+                <ComboBoxItem>Mensch</ComboBoxItem>
+                <ComboBoxItem>Computer</ComboBoxItem>
+            </ComboBox>
+            <StackPanel Margin="0,0,7,0">
+                <Label>Anzahl Felder</Label>
+                <TextBox Name="tfNumberOfTiles"></TextBox>
+            </StackPanel>
+            <Button VerticalAlignment="Center" Click="Button_Click">Spiel Starten</Button>
+        </StackPanel>
+
+        <UniformGrid Grid.Row="1" Name="GameGrid">
+            
+        </UniformGrid>
+    </Grid>
+</Window>
