@@ -92,7 +92,6 @@ COMMIT;
 
 
 -- Ohne Materialized view
-
 SELECT O.Region,
        P.Marke,
        Z.Jahr,
@@ -106,7 +105,6 @@ ORDER BY O.Region, P.Marke;
 
 
 -- Mit Materialized view
-
 CREATE MATERIALIZED VIEW Region_Marke_Jahr
     TABLESPACE dwh
     BUILD IMMEDIATE
@@ -129,10 +127,9 @@ SELECT * FROM Region_Marke_Jahr ORDER BY Region, Marke;
 -- ============================================================
 -- TEIL 6: ABFRAGE MIT QUERY REWRITE
 
--- Hinweis: Query Rewrite funktioniert nur, wenn
---   a) ENABLE QUERY REWRITE gesetzt ist (s. oben)
---   b) Die Session den Parameter QUERY_REWRITE_ENABLED = TRUE hat
---      (Standard in Oracle, prüfbar mit: SHOW PARAMETER query_rewrite_enabled)
+-- Query Rewrite funktioniert nur, wenn
+--   1. ENABLE QUERY REWRITE gesetzt ist
+--   2. Die Session den Parameter QUERY_REWRITE_ENABLED = TRUE hat
 SELECT O.Region,
        Z.Jahr,
        P.Hersteller,
@@ -146,7 +143,7 @@ WHERE O.Region = 'Nord'
 GROUP BY O.Region, Z.Jahr, P.Hersteller
 ORDER BY P.Hersteller;
 
--- Ausführungsplan prüfen (zeigt ob Query Rewrite greift):
+-- Ausführungsplan prüfen
 EXPLAIN PLAN FOR
 SELECT O.Region,
        Z.Jahr,
