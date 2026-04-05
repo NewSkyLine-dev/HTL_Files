@@ -1,8 +1,10 @@
 CREATE TABLESPACE dwh
+    DATAFILE '/Users/fabianoppermann/Developer/dwh01.dbf' SIZE 100M AUTOEXTEND ON
     EXTENT MANAGEMENT LOCAL
     SEGMENT SPACE MANAGEMENT AUTO;
 
-CREATE TEMPORARY TABLESPACE dwh_temp;
+CREATE TEMPORARY TABLESPACE dwh_temp
+    TEMPFILE '/Users/fabianoppermann/Developer/dwh_temp01.dbf' SIZE 50M AUTOEXTEND ON;
 
 CREATE USER dwh
     IDENTIFIED BY dwh_passwort
