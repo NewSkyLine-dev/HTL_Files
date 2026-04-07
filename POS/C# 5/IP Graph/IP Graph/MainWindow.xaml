@@ -8,6 +8,8 @@
         xmlns:GraphControl="clr-namespace:GraphControl;assembly=GraphControl"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <GraphControl:Graph Name="graph" StartChanged="test_StartChanged" EndChanged="test_EndChanged"/>
+        <GraphControl:Graph Name="graph"
+                            StartChanged="test_StartChanged"
+                            EndChanged="test_EndChanged"/>
     </Grid>
 </Window>
