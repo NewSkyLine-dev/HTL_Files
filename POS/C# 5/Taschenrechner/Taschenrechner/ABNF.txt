@@ -1,0 +1,7 @@
+<formular> ::= <strich>
+<strich>   ::= <punkt> | <punkt> ("+" | "-") <strich>
+<punkt>    ::= <potenz> | <potenz> ("*" | "/") <punkt>
+<potenz>   ::= <atom> | <atom> "^" <potenz>
+<atom>     ::= <zahl> | "(" <formular> ")"
+<zahl>     ::= ["-"] <ziffer> { <ziffer> }
+<ziffer>   ::= "0" | "1" | ... | 9 

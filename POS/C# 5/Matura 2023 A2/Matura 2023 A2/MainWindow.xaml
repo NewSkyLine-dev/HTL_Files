@@ -1,0 +1,14 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Matura_2023_A2"
+        xmlns:Kakuro="clr-namespace:Kakuro;assembly=Kakuro" 
+        x:Class="Matura_2023_A2.MainWindow"
+        mc:Ignorable="d"
+        Title="Matura 2023 Aufgabe 2" Height="450" Width="800">
+    <DockPanel>
+        
+    </DockPanel>
+</Window>

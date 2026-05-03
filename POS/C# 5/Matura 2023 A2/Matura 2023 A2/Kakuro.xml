@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Kakuro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Rows="8" Columns="8">
+  <InaktiveFields>
+    <Field X="0" Y="0" />
+    <Field X="3" Y="0" />
+    <Field X="4" Y="0" />
+    <Field X="3" Y="1" />
+    <Field X="7" Y="3" />
+    <Field X="0" Y="4" />
+    <Field X="0" Y="5" />
+    <Field X="4" Y="7" />
+  </InaktiveFields>
+  <Sums>
+    <Sum X="1" Y="0" Horizontal="0" Vertical="23" />
+    <Sum X="2" Y="0" Horizontal="0" Vertical="30" />
+    <Sum X="5" Y="0" Horizontal="0" Vertical="27" />
+    <Sum X="6" Y="0" Horizontal="0" Vertical="12" />
+    <Sum X="7" Y="0" Horizontal="0" Vertical="16" />
+    <Sum X="0" Y="1" Horizontal="16" Vertical="0" />
+    <Sum X="4" Y="1" Horizontal="24" Vertical="17" />
+    <Sum X="0" Y="2" Horizontal="17" Vertical="0" />
+    <Sum X="3" Y="2" Horizontal="29" Vertical="15" />
+    <Sum X="0" Y="3" Horizontal="35" Vertical="0" />
+    <Sum X="6" Y="3" Horizontal="0" Vertical="12" />
+    <Sum X="1" Y="4" Horizontal="7" Vertical="0" />
+    <Sum X="4" Y="4" Horizontal="8" Vertical="7" />
+    <Sum X="7" Y="4" Horizontal="0" Vertical="7" />
+    <Sum X="1" Y="5" Horizontal="0" Vertical="11" />
+    <Sum X="2" Y="5" Horizontal="16" Vertical="10" />
+    <Sum X="0" Y="6" Horizontal="21" Vertical="0" />
+    <Sum X="5" Y="6" Horizontal="5" Vertical="0" />
+    <Sum X="0" Y="7" Horizontal="6" Vertical="0" />
+    <Sum X="5" Y="7" Horizontal="3" Vertical="0" />
+  </Sums>
+</Kakuro>
