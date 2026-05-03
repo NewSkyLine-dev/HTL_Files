@@ -1,0 +1,7 @@
+<program>      ::= <equivalence>
+<equivalence>  ::= <implication> | <implication> "↔" <equivalence>
+<implication>  ::= <disjunction> | <disjunction> "→" <implication>
+<disjunction>  ::= <conjunction> | <conjunction> "⋁" <disjunction>
+<conjunction>  ::= <negation> | <negation> "∧" <conjunction>
+<negation>     ::= "¬" <negation> | <atom>
+<atom>         ::= "a" | "b" | .. | "z" | "(" <program> ")"

@@ -1,0 +1,33 @@
+﻿<Window x:Class="A1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:A1"
+        mc:Ignorable="d"
+        Title="Aussagenlogik" Height="720" Width="1100" MinHeight="600" MinWidth="900">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Aussagenlogische Formel" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,8" />
+
+        <DockPanel Grid.Row="1" Margin="0,0,0,8">
+            <Button x:Name="button" Content="Parsen und Wahrheitstabelle erzeugen" DockPanel.Dock="Right" Padding="16,6" Margin="8,0,0,0" Click="button_Click" />
+            <TextBox x:Name="textBox" Height="28" VerticalContentAlignment="Center" TextWrapping="NoWrap" Text="((s ∧ ¬(q ↔ r)) ⋁ (q → r)) ↔ (p → (q ∧ r))" />
+        </DockPanel>
+
+        <TextBlock x:Name="statusText" Grid.Row="2" Text="Bereit." FontWeight="SemiBold" Margin="0,0,0,8" />
+
+        <Border Grid.Row="3" BorderThickness="1" BorderBrush="LightGray" Padding="8" Margin="0,4,0,8">
+            <TextBox x:Name="treeBox" IsReadOnly="True" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" TextWrapping="NoWrap" FontFamily="Consolas" />
+        </Border>
+
+        <DataGrid x:Name="truthTableGrid" Grid.Row="4" AutoGenerateColumns="True" IsReadOnly="True" HeadersVisibility="All" />
+    </Grid>
+</Window>
